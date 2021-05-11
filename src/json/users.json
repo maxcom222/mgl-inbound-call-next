@@ -1,0 +1,182 @@
+[
+  {
+    "name": "MedigapLife",
+    "email": "admin@medigaplife.com",
+    "location": "Cupertino, CA",
+    "company": "Apple, Inc.",
+    "description": "Vital Database Dude",
+    "img": "m1.png",
+    "color": "green",
+    "country": "Australia"
+  },
+  {
+    "name": "Janet Abshire",
+    "email": "lucas@smith.com",
+    "location": "Cupertino, CA",
+    "company": "Pinterest",
+    "description": "Lead Innovation Officer",
+    "img": "w1.png",
+    "color": "blue",
+    "country": "USA"
+  },
+  {
+    "name": "Lucas Koch",
+    "email": "lucas@smith.com",
+    "location": "Cupertino, CA",
+    "company": "Reddit",
+    "description": "Incomparable UX Editor",
+    "img": "m2.png",
+    "color": "green",
+    "country": "England"
+  },
+  {
+    "name": "Gladys Schuster",
+    "email": "lucas@smith.com",
+    "location": "Cupertino, CA",
+    "description": "Primary Product Pioneer",
+    "company": "Coursera",
+    "img": "w2.png",
+    "color": "yellow",
+    "country": "USA"
+  },
+  {
+    "name": "George Clinton",
+    "email": "lucas@smith.com",
+    "location": "Cupertino, CA",
+    "company": "Facebook",
+    "description": "World Class API Genius",
+    "img": "m3.png",
+    "color": "green",
+    "country": "Canada"
+  },
+  {
+    "name": "Jennifer Weber",
+    "email": "lucas@smith.com",
+    "location": "Cupertino, CA",
+    "description": "World Class Innovation Controller",
+    "company": "Lyft",
+    "img": "w3.png",
+    "color": "blue",
+    "country": "New Zealand"
+  },
+  {
+    "name": "Thomas Lee",
+    "email": "lucas@smith.com",
+    "location": "Cupertino, CA",
+    "description": "Client Side Press Tester",
+    "company": "Quora",
+    "img": "m4.png",
+    "color": "green",
+    "country": "USA"
+  },
+  {
+    "name": "Courtney Dickens",
+    "email": "lucas@smith.com",
+    "location": "Cupertino, CA",
+    "description": "Principal Integration Ninja",
+    "company": "Yelp",
+    "img": "w5.png",
+    "color": "red",
+    "country": "Australia"
+  },
+  {
+    "name": "James Smith",
+    "email": "lucas@smith.com",
+    "location": "Cupertino, CA",
+    "description": "Project Management Champ",
+    "company": "Apple, Inc.",
+    "img": "m6.png",
+    "color": "primary",
+    "country": "Germany"
+  },
+  {
+    "name": "Clorinda Murphy",
+    "email": "lucas@smith.com",
+    "location": "Cupertino, CA",
+    "description": "Social Media Writer",
+    "company": "Tinder",
+    "img": "w6.png",
+    "color": "yellow",
+    "country": "Canada"
+  },
+  {
+    "name": "Eric Simpson",
+    "email": "lucas@smith.com",
+    "location": "Cupertino, CA",
+    "description": "Innovation Pioneer",
+    "company": "Facebook",
+    "img": "m7.png",
+    "color": "red",
+    "country": "USA"
+  },
+  {
+    "name": "Monica White",
+    "email": "lucas@smith.com",
+    "location": "Cupertino, CA",
+    "description": "iOS Strategist",
+    "company": "Twitter",
+    "img": "w7.png",
+    "color": "green",
+    "country": "Argentina"
+  },
+  {
+    "name": "Michael Jenkins",
+    "email": "lucas@smith.com",
+    "location": "Cupertino, CA",
+    "description": "Ruby On Rails Developer",
+    "company": "Microsoft Inc.",
+    "img": "m8.png",
+    "color": "blue",
+    "country": "Brazil"
+  },
+  {
+    "name": "Jackie Perkins",
+    "email": "lucas@smith.com",
+    "location": "Cupertino, CA",
+    "description": "Executive PR Evangelist",
+    "company": "Uber",
+    "img": "w8.png",
+    "color": "red",
+    "country": "England"
+  },
+  {
+    "name": "Melvin Hicks",
+    "email": "lucas@smith.com",
+    "location": "Cupertino, CA",
+    "description": "Primary PHP Monkey",
+    "company": "Google Inc.",
+    "img": "m9.png",
+    "color": "yellow",
+    "country": "USA"
+  },
+  {
+    "name": "Hannah Cook",
+    "email": "lucas@smith.com",
+    "location": "Cupertino, CA",
+    "description": "Wise Email Captain",
+    "company": "Pinterest",
+    "img": "w9.png",
+    "color": "green",
+    "country": "Sweden"
+  },
+  {
+    "name": "Jerome Lynch",
+    "email": "lucas@smith.com",
+    "location": "Cupertino, CA",
+    "description": "Android Engineer",
+    "company": "LG Electronics",
+    "img": "m10.png",
+    "color": "red",
+    "country": "France"
+  },
+  {
+    "name": "Kirsten Perez",
+    "email": "lucas@smith.com",
+    "location": "Cupertino, CA",
+    "description": "UI Expert",
+    "company": "Facebook",
+    "img": "w10.png",
+    "color": "red",
+    "country": "Mexico"
+  }
+]

@@ -1,0 +1,748 @@
+{
+	"info": {
+		"_postman_id": "b019a1b1-7405-451f-93b2-54d85e821fd0",
+		"name": "MGL-Ringba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Campaign",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"affiliates\": [\n        {\n            \"phoneNumber\": {\n                \"friendlyName\": \"(855) 339-8928\",\n                \"phoneNumber\": \"+18553398928\",\n                \"lata\": null,\n                \"locality\": null,\n                \"rateCenter\": null,\n                \"latitude\": null,\n                \"longitude\": null,\n                \"region\": null,\n                \"postalCode\": null,\n                \"isoCountry\": \"US\",\n                \"addressRequirements\": \"none\",\n                \"beta\": false,\n                \"capabilities\": {\n                    \"voice\": true,\n                    \"SMS\": true,\n                    \"MMS\": false,\n                    \"fax\": true\n                },\n                \"isTollFree\": true\n            },\n            \"affiliateId\": \"14d344b9-93de-43e1-8264-94742e379f88\"\n        }\n    ],\n    \"targetIds\": [\n        1\n    ],\n    \"countryCode\": \"US\",\n    \"name\": \"plakos-campaign-test306\",\n    \"accountId\": \"e402b4fb-2887-4c1b-ae5c-df8b3e3ddbe0\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/campaign/create",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"campaign",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Campaign Call Tracking Tags",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"campaignId\": 12,\n    \"tagName\": \"test\",\n    \"numberId\": 1,\n    \"replaceNumber\": \"+23342423221\",\n    \"poolId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/campaign/add-call-tracking-tags",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"campaign",
+						"add-call-tracking-tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Campaign Call Tracking Tags",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"callTrackingId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/campaign/delete-call-tracking-tags",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"campaign",
+						"delete-call-tracking-tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Campaign Priority",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"campaignId\": 14,\n    \"callRouteId\": 41,\n    \"priority\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/campaign/set-priority",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"campaign",
+						"set-priority"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Campaign Route",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"campaignId\": 14,\n    \"callRouteId\": 41,\n    \"priority\": 2,\n    \"weight\": 2,\n    \"conversionValue\": 3,\n    \"payoutValue\": 4,\n    \"secondsFromLastCall\": 0,\n    \"conversionType\": \"connectedCall\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/campaign/update-route",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"campaign",
+						"update-route"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Campaign Weight",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"campaignId\": 14,\n    \"callRouteId\": 41,\n    \"weight\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/campaign/set-weight",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"campaign",
+						"set-weight"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Publisher Number",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"phonenumberIds\": [1, 2, 3],\n  \"affiliateId\": \"1c417ae0-ae30-40cd-8f51-e83201abca87\",\n  \"workflowSid\": \"WWf81b3921e84cad4e4854c094d10ded2a\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/campaign/add-publisher-number",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"campaign",
+						"add-publisher-number"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Campaign Publisher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"affiliates\": [\n        {\n            \"phoneNumber\": {\n                \"friendlyName\": \"(855) 339-8928\",\n                \"phoneNumber\": \"+18553398928\",\n                \"lata\": null,\n                \"locality\": null,\n                \"rateCenter\": null,\n                \"latitude\": null,\n                \"longitude\": null,\n                \"region\": null,\n                \"postalCode\": null,\n                \"isoCountry\": \"US\",\n                \"addressRequirements\": \"none\",\n                \"beta\": false,\n                \"capabilities\": {\n                    \"voice\": true,\n                    \"SMS\": true,\n                    \"MMS\": false,\n                    \"fax\": true\n                },\n                \"isTollFree\": true\n            },\n            \"affiliateId\": \"14d344b9-93de-43e1-8264-94742e379f88\"\n        }\n    ],\n   \"workflowSid\": \"WWf81b3921e84cad4e4854c094d10ded2a\",\n   \"accountId\": \"e402b4fb-2887-4c1b-ae5c-df8b3e3ddbe0\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/campaign/add-campaign-publisher",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"campaign",
+						"add-campaign-publisher"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Campaign Publisher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"affiliateId\": \"14d344b9-93de-43e1-8264-94742e379f88\",\n   \"workflowSid\": \"WWfeee63a1aca68e3b7240a28db3f24ee4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/campaign/delete-campaign-publisher",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"campaign",
+						"delete-campaign-publisher"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Publisher Number",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"phoneNumberId\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/campaign/delete-publisher-number",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"campaign",
+						"delete-publisher-number"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Campaign",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"workflowSid\": \"WWf81b3921e84cad4e4854c094d10ded2a\",\n    \"name\": \"Campaign updated test\",\n    \"numberDisplayFormat\": \"(123) 456-7890\",\n    \"evalAnonymDuplication\": true,\n    \"payoutDupesGlobal\": true,\n\n    \"duplicateSetting\": \"ON_CONNECT\",\n\n    \"routeToDifferent\": true,\n    \"routeToOriginal\": false,\n    \"strict\": true,\n\n    \"record\": true,\n    \"recordFromAnswer\": true,\n    \"trimSilence\": true,\n\n    \"dialAttempts\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/campaign/update",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"campaign",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Campaign Spam Detection",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"workflowSid\": \"WWf81b3921e84cad4e4854c094d10ded2a\",\n    \"blockDuplicatesForSeconds\": 2,\n    \"trackAnonymous\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/campaign/update-spam-detection",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"campaign",
+						"update-spam-detection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Campaign",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"workflowSid\": \"WW2eaa961dc5dc4a2c4b359c1b0b775e0a\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/campaign/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"campaign",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search TollFree Number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/numbers/search?resource_type=tollfree",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"numbers",
+						"search"
+					],
+					"query": [
+						{
+							"key": "resource_type",
+							"value": "tollfree"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Local Number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/numbers/search?resource_type=local&area_code=786",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"numbers",
+						"search"
+					],
+					"query": [
+						{
+							"key": "resource_type",
+							"value": "local"
+						},
+						{
+							"key": "area_code",
+							"value": "786"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Number Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/numbers/info?phone_number=+18339722623",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"numbers",
+						"info"
+					],
+					"query": [
+						{
+							"key": "phone_number",
+							"value": "+18339722623"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Target",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"targetGroupId\": \"\",\n  \"name\": \"plakos-test1\",\n  \"instructions\": {\n    \"data\": {\n      \"connectionTimeOut\": \"2\",\n      \"callType\": \"number\",\n      \"number\": \"2342342342\"\n    }\n  },\n  \"isHighRateTarget\": false,\n  \"subId\": \"awef\",\n  \"targetCallIncrement\": \"onConvert\",\n  \"conversionTimerOffset\": 0,\n  \"schedule\": {\n    \"data\": {\n      \"concurrencyCap\": -1,\n      \"hoursOfOperation\": {\n        \"data\": []\n      },\n      \"timeZoneId\": \"Hawaiian Standard Time\",\n      \"allTimeSumCap\": -1,\n      \"monthlySumCap\": -1,\n      \"dailySumCap\": -1,\n      \"hourlySumCap\": -1,\n      \"allTimeCap\": -1,\n      \"monthlyCap\": -1,\n      \"dailyCap\": -1,\n      \"hourlyCap\": -1\n    }\n  },\n  \"criteria\": {\n    \"data\": {\n      \"tagRoutableRule\": {\n        \"data\": [\n          {\n            \"tagCriteria\": {\n                \"data\" : [\n                    {\n                        \"tagId\": \"11\",\n                        \"tagIds\": [\n                        \"InboundNumber:State\"\n                        ],\n                        \"comparisonType\": \"BEGINS_WITH\",\n                        \"value\": \"1\",\n                        \"isNegativeMatch\": false,\n                        \"isNumber\": false\n                    },\n                    {\n                        \"tagId\": \"15\",\n                        \"tagIds\": [\n                        \"InboundNumber:State\"\n                        ],\n                        \"comparisonType\": \"EQUALS\",\n                        \"value\": \"2\",\n                        \"isNegativeMatch\": false,\n                        \"isNumber\": false\n                    }\n                ]\n            }\n          },\n          {\n            \"tagCriteria\": {\n                \"data\": [\n                    {\n                        \"tagId\": \"36\",\n                        \"tagIds\": [\n                        \"InboundNumber:State\"\n                        ],\n                        \"comparisonType\": \"EQUALS\",\n                        \"value\": \"3\",\n                        \"isNegativeMatch\": false,\n                        \"isNumber\": false\n                    }\n                ]\n            }\n          }\n        ]\n      }\n    }\n  },\n  \"accountId\": \"e402b4fb-2887-4c1b-ae5c-df8b3e3ddbe0\",\n  \"ownerId\": \"a6787b9e-d82c-4e6c-8b6c-e8fe07f0cae0\",\n  \"enabled\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/target/create",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"target",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Target",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"workerSid\": \"WKeb1f91148654cf7347eca81a8c7b9493\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/target/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"target",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Target",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"workerSid\": \"WKf4a7d78f01551ff598462f721bbdcba9\",\n  \"targetGroupId\": \"\",\n  \"name\": \"delta53 gama\",\n  \"instructions\": {\n    \"data\": {\n      \"connectionTimeOut\": 15,\n      \"callType\": \"number\",\n      \"number\": \"+18625761202\"\n    }\n  },\n  \"isHighRateTarget\": false,\n  \"subId\": \"MGL-Dev\",\n  \"targetCallIncrement\": \"onConvert\",\n  \"conversionTimerOffset\": 0,\n  \"schedule\": {\n    \"data\": {\n      \"concurrencyCap\": 3,\n      \"timeZoneId\": \"Eastern Standard Time\",\n      \"allTimeSumCap\": -1,\n      \"monthlySumCap\": -1,\n      \"dailySumCap\": -1,\n      \"hourlySumCap\": -1,\n      \"allTimeCap\": -1,\n      \"monthlyCap\": -1,\n      \"dailyCap\": -1,\n      \"hourlyCap\": -1,\n      \"hoursOfOperation\": {\n        \"data\": [\n          {\n            \"openTime\": {\n              \"data\": {\n                \"minute\": 0,\n                \"hour\": 9\n              }\n            },\n            \"closeTime\": {\n              \"data\": {\n                \"minute\": 0,\n                \"hour\": 21\n              }\n            },\n            \"inverted\": false,\n            \"isClosed\": false\n          },\n          {\n            \"openTime\": {\n              \"data\": {\n                \"minute\": 0,\n                \"hour\": 10\n              }\n            },\n            \"closeTime\": {\n              \"data\": {\n                \"minute\": 0,\n                \"hour\": 21\n              }\n            },\n            \"inverted\": false,\n            \"isClosed\": false\n          },\n          {\n            \"openTime\": {\n              \"data\": {\n                \"minute\": 0,\n                \"hour\": 10\n              }\n            },\n            \"closeTime\": {\n              \"data\": {\n                \"minute\": 0,\n                \"hour\": 21\n              }\n            },\n            \"inverted\": false,\n            \"isClosed\": false\n          },\n          {\n            \"openTime\": {\n              \"data\": {\n                \"minute\": 0,\n                \"hour\": 9\n              }\n            },\n            \"closeTime\": {\n              \"data\": {\n                \"minute\": 0,\n                \"hour\": 21\n              }\n            },\n            \"inverted\": false,\n            \"isClosed\": false\n          },\n          {\n            \"openTime\": {\n              \"data\": {\n                \"minute\": 0,\n                \"hour\": 9\n              }\n            },\n            \"closeTime\": {\n              \"data\": {\n                \"minute\": 0,\n                \"hour\": 21\n              }\n            },\n            \"inverted\": false,\n            \"isClosed\": false\n          },\n          {\n            \"openTime\": {\n              \"data\": {\n                \"minute\": 0,\n                \"hour\": 9\n              }\n            },\n            \"closeTime\": {\n              \"data\": {\n                \"minute\": 0,\n                \"hour\": 21\n              }\n            },\n            \"inverted\": false,\n            \"isClosed\": false\n          },\n          {\n            \"openTime\": {\n              \"data\": {\n                \"minute\": 0,\n                \"hour\": 9\n              }\n            },\n            \"closeTime\": {\n              \"data\": {\n                \"minute\": 0,\n                \"hour\": 21\n              }\n            },\n            \"inverted\": false,\n            \"isClosed\": false\n          }\n        ]\n      }\n    }\n  },\n  \"criteria\": {\n    \"data\": {\n      \"tagRoutableRule\": {\n\n      }\n    }\n  },\n  \"accountId\": \"e402b4fb-2887-4c1b-ae5c-df8b3e3ddbe0\",\n  \"ownerId\": \"521002f2-c96a-41f1-9c00-576977ce9ec7\",\n  \"enabled\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/target/update",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"target",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Campaign Call Route",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"targetId\": 11,\n    \"campaignId\": 21,\n    \"accountId\": \"e402b4fb-2887-4c1b-ae5c-df8b3e3ddbe0\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/campaign/add-route",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"campaign",
+						"add-route"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Default Payout Settings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"payoutType\": \"FIXED\",\n    \"conversionType\": \"IN_COMING\",\n    \"payoutValue\": 0,\n    \"conversionValue\": 32,\n    \"schedule\": {\n        \"data\": {\n            \"concurrencyCap\": 3,\n            \"timeZoneId\": \"Eastern Standard Time\",\n            \"allTimeSumCap\": -1,\n            \"monthlySumCap\": -1,\n            \"dailySumCap\": -1,\n            \"hourlySumCap\": -1,\n            \"allTimeCap\": -1,\n            \"monthlyCap\": -1,\n            \"dailyCap\": -1,\n            \"hourlyCap\": -1,\n            \"hoursOfOperation\": {\n                \"data\": [\n                {\n                    \"openTime\": {\n                    \"data\": {\n                        \"minute\": 0,\n                        \"hour\": 9\n                    }\n                    },\n                    \"closeTime\": {\n                    \"data\": {\n                        \"minute\": 0,\n                        \"hour\": 21\n                    }\n                    },\n                    \"inverted\": false,\n                    \"isClosed\": false\n                },\n                {\n                    \"openTime\": {\n                    \"data\": {\n                        \"minute\": 0,\n                        \"hour\": 10\n                    }\n                    },\n                    \"closeTime\": {\n                    \"data\": {\n                        \"minute\": 0,\n                        \"hour\": 21\n                    }\n                    },\n                    \"inverted\": false,\n                    \"isClosed\": false\n                },\n                {\n                    \"openTime\": {\n                    \"data\": {\n                        \"minute\": 0,\n                        \"hour\": 10\n                    }\n                    },\n                    \"closeTime\": {\n                    \"data\": {\n                        \"minute\": 0,\n                        \"hour\": 21\n                    }\n                    },\n                    \"inverted\": false,\n                    \"isClosed\": false\n                },\n                {\n                    \"openTime\": {\n                    \"data\": {\n                        \"minute\": 0,\n                        \"hour\": 9\n                    }\n                    },\n                    \"closeTime\": {\n                    \"data\": {\n                        \"minute\": 0,\n                        \"hour\": 21\n                    }\n                    },\n                    \"inverted\": false,\n                    \"isClosed\": false\n                },\n                {\n                    \"openTime\": {\n                    \"data\": {\n                        \"minute\": 0,\n                        \"hour\": 9\n                    }\n                    },\n                    \"closeTime\": {\n                    \"data\": {\n                        \"minute\": 0,\n                        \"hour\": 21\n                    }\n                    },\n                    \"inverted\": false,\n                    \"isClosed\": false\n                },\n                {\n                    \"openTime\": {\n                    \"data\": {\n                        \"minute\": 0,\n                        \"hour\": 9\n                    }\n                    },\n                    \"closeTime\": {\n                    \"data\": {\n                        \"minute\": 0,\n                        \"hour\": 21\n                    }\n                    },\n                    \"inverted\": false,\n                    \"isClosed\": false\n                },\n                {\n                    \"openTime\": {\n                    \"data\": {\n                        \"minute\": 0,\n                        \"hour\": 9\n                    }\n                    },\n                    \"closeTime\": {\n                    \"data\": {\n                        \"minute\": 0,\n                        \"hour\": 21\n                    }\n                    },\n                    \"inverted\": false,\n                    \"isClosed\": false\n                }\n                ]\n            }\n        }\n    },\n    \"deDupeSetting\": {\n        \"data\": {\n            \"secondsFromLastCall\": 0\n        }\n    },\n    \"criteria\": {\n        \"data\": {\n        \"tagRoutableRule\": {\n            \"data\": [\n            {\n                \"tagCriteria\": {\n                \"data\": [\n                    {\n                    \"tagId\": \"8\",\n                    \"tagIds\": [\n                        \"InboundNumber:State\"\n                    ],\n                    \"comparisonType\": \"BEGINS_WITH\",\n                    \"value\": \"1\",\n                    \"isNegativeMatch\": false,\n                    \"isNumber\": false\n                    },\n                    {\n                    \"tagId\": \"15\",\n                    \"tagIds\": [\n                        \"InboundNumber:State\"\n                    ],\n                    \"comparisonType\": \"CONTAINS\",\n                    \"value\": \"1c417ae0-ae30-40cd-8f51-e83201abca87\",\n                    \"isNegativeMatch\": false,\n                    \"isNumber\": false\n                    },\n                    {\n                    \"tagId\": \"69\",\n                    \"tagIds\": [\n                        \"InboundNumber:State\"\n                    ],\n                    \"comparisonType\": \"EQUALS\",\n                    \"value\": \"[\\\"AK\\\",\\\"CA\\\"]\",\n                    \"isNegativeMatch\": false,\n                    \"isNumber\": false\n                    }\n                ]\n                }\n            },\n            {\n                \"tagCriteria\": {\n                \"data\": [\n                    {\n                    \"tagId\": \"40\",\n                    \"tagIds\": [\n                        \"InboundNumber:State\"\n                    ],\n                    \"comparisonType\": \"EXISTS\",\n                    \"value\": \"a38f0f4d-cd7e-4426-8207-50aeb57a0f8e\",\n                    \"isNegativeMatch\": false,\n                    \"isNumber\": false\n                    }\n                ]\n                }\n            }\n            ]\n        }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/campaign/add-campaign-payout-setting",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"campaign",
+						"add-campaign-payout-setting"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Default Payout Settings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"campaignId\": 3,\n    \"payoutSettings\": [\n        {\n            \"payoutType\": \"FIXED\",\n            \"payoutValue\": 0,\n            \"conversionType\": \"IN_COMING\",\n            \"conversionValue\": 32,\n            \"schedule\": {\n                \"data\": {\n                    \"allTimeCap\": -1,\n                    \"allTimeSumCap\": -1,\n                    \"monthlyCap\": -1,\n                    \"monthlySumCap\": -1,\n                    \"dailyCap\": -1,\n                    \"dailySumCap\": -1,\n                    \"hourlyCap\": -1,\n                    \"hourlySumCap\": -1,\n                    \"concurrencyCap\": 3,\n                    \"timeZoneId\": \"Eastern Standard Time\",\n                    \"hoursOfOperation\": {\n                        \"data\": [\n                            {\n                                \"openTime\": {\n                                    \"data\": {\n                                        \"hour\": 9,\n                                        \"minute\": 0\n                                    }\n                                },\n                                \"closeTime\": {\n                                    \"data\": {\n                                        \"hour\": 21,\n                                        \"minute\": 0\n                                    }\n                                },\n                                \"inverted\": false,\n                                \"isClosed\": false\n                            },\n                            {\n                                \"openTime\": {\n                                    \"data\": {\n                                        \"hour\": 10,\n                                        \"minute\": 0\n                                    }\n                                },\n                                \"closeTime\": {\n                                    \"data\": {\n                                        \"hour\": 21,\n                                        \"minute\": 0\n                                    }\n                                },\n                                \"inverted\": false,\n                                \"isClosed\": false\n                            },\n                            {\n                                \"openTime\": {\n                                    \"data\": {\n                                        \"hour\": 10,\n                                        \"minute\": 0\n                                    }\n                                },\n                                \"closeTime\": {\n                                    \"data\": {\n                                        \"hour\": 21,\n                                        \"minute\": 0\n                                    }\n                                },\n                                \"inverted\": false,\n                                \"isClosed\": false\n                            },\n                            {\n                                \"openTime\": {\n                                    \"data\": {\n                                        \"hour\": 9,\n                                        \"minute\": 0\n                                    }\n                                },\n                                \"closeTime\": {\n                                    \"data\": {\n                                        \"hour\": 21,\n                                        \"minute\": 0\n                                    }\n                                },\n                                \"inverted\": false,\n                                \"isClosed\": false\n                            },\n                            {\n                                \"openTime\": {\n                                    \"data\": {\n                                        \"hour\": 9,\n                                        \"minute\": 0\n                                    }\n                                },\n                                \"closeTime\": {\n                                    \"data\": {\n                                        \"hour\": 21,\n                                        \"minute\": 0\n                                    }\n                                },\n                                \"inverted\": false,\n                                \"isClosed\": false\n                            },\n                            {\n                                \"openTime\": {\n                                    \"data\": {\n                                        \"hour\": 9,\n                                        \"minute\": 0\n                                    }\n                                },\n                                \"closeTime\": {\n                                    \"data\": {\n                                        \"hour\": 21,\n                                        \"minute\": 0\n                                    }\n                                },\n                                \"inverted\": false,\n                                \"isClosed\": false\n                            },\n                            {\n                                \"openTime\": {\n                                    \"data\": {\n                                        \"hour\": 9,\n                                        \"minute\": 0\n                                    }\n                                },\n                                \"closeTime\": {\n                                    \"data\": {\n                                        \"hour\": 21,\n                                        \"minute\": 0\n                                    }\n                                },\n                                \"inverted\": false,\n                                \"isClosed\": false\n                            }\n                        ]\n                    }\n                }\n            },\n            \"criteria\": {\n                \"data\": {\n                    \"tagRoutableRule\": {\n                        \"data\": [\n                            {\n                                \"tagCriteria\": {\n                                    \"data\": [\n                                        {\n                                            \"comparisonType\": \"BEGINS_WITH\",\n                                            \"isNegativeMatch\": false,\n                                            \"isNumber\": false,\n                                            \"tagId\": \"8\",\n                                            \"tagIds\": [\n                                                \"InboundNumber:State\"\n                                            ],\n                                            \"value\": \"1\"\n                                        },\n                                        {\n                                            \"comparisonType\": \"CONTAINS\",\n                                            \"isNegativeMatch\": false,\n                                            \"isNumber\": false,\n                                            \"tagId\": \"15\",\n                                            \"tagIds\": [\n                                                \"InboundNumber:State\"\n                                            ],\n                                            \"value\": \"1c417ae0-ae30-40cd-8f51-e83201abca87\"\n                                        },\n                                        {\n                                            \"comparisonType\": \"EQUALS\",\n                                            \"isNegativeMatch\": false,\n                                            \"isNumber\": false,\n                                            \"tagId\": \"69\",\n                                            \"tagIds\": [\n                                                \"InboundNumber:State\"\n                                            ],\n                                            \"value\": \"[\\\"AK\\\",\\\"CA\\\"]\"\n                                        }\n                                    ]\n                                }\n                            },\n                            {\n                                \"tagCriteria\": {\n                                    \"data\": [\n                                        {\n                                            \"comparisonType\": \"EXISTS\",\n                                            \"isNegativeMatch\": false,\n                                            \"isNumber\": false,\n                                            \"tagId\": \"40\",\n                                            \"tagIds\": [\n                                                \"InboundNumber:State\"\n                                            ],\n                                            \"value\": \"a38f0f4d-cd7e-4426-8207-50aeb57a0f8e\"\n                                        }\n                                    ]\n                                }\n                            }\n                        ]\n                    }\n                }\n            },\n            \"deDupeSetting\": {\n                \"data\": {\n                    \"secondsFromLastCall\": 0\n                }\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/campaign/set-campaign-payout-settings",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"campaign",
+						"set-campaign-payout-settings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upate Default Payout Settings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"defaultPyaoutSettingId\": 6,\n    \"payoutType\": \"FIXED\",\n    \"conversionType\": \"IN_COMING\",\n    \"payoutValue\": 0,\n    \"conversionValue\": 32,\n    \"schedule\": {\n        \"data\": {\n        }\n    },\n    \"criteria\": {\n        \"data\": {\n        \"tagRoutableRule\": {\n            \"data\": [\n            ]\n        }\n        }\n    },\n    \"deDupeSetting\": {\n        \"data\": {\n            \"secondsFromLastCall\": 0\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/campaign/update-campaign-payout-setting",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"campaign",
+						"update-campaign-payout-setting"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Default Payout Settings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"defaultPyaoutSettingId\": 6\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/campaign/delete-campaign-payout-setting",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"campaign",
+						"delete-campaign-payout-setting"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Campaign Call Route",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"queueSid\": \"WQ7736bf40bebb6d30e394de88bbf4321b\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/campaign/delete-call-route",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"campaign",
+						"delete-call-route"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "da47eec8-e019-44cc-8abb-5180bbbf5dfd",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "bf0c7a92-ad57-41b0-9d7c-db2df5611cc8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

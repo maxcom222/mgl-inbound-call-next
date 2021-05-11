@@ -1,0 +1,44 @@
+@import "../variables";
+
+.dropdown {
+  @apply absolute shadow-lg transform transition ease-in-out duration-300 opacity-0 scale-0 pointer-events-none;
+  &:not(.dropdown-right),
+  &:not(.dropdown-left) {
+    @apply origin-top -translate-x-1/2 translate-y-0;
+  }
+  &.dropdown-right {
+    @apply origin-top-right right-0 translate-x-0 translate-y-0;
+  }
+  &.dropdown-left {
+    @apply origin-top-left left-0 translate-x-0 translate-y-0;
+  }
+  &.open {
+    @apply opacity-100 scale-100 pointer-events-auto;
+  }
+  .dropdown-title {
+    @apply py-2 px-3 text-sm font-bold font-poppins uppercase;
+  }
+  .dropdown-content {
+    @apply shadow-lg;
+  }
+  &.navbar-dropdown {
+    @apply z-30;
+  }
+}
+
+@each $key, $value in $palettes {
+  [data-background="#{$key}"] {
+    .dropdown {
+      .dropdown-content {
+        @apply #{map-get($value, "background-color")};
+        .dropdown-item {
+          @apply #{map-get($value, "background-color")};
+          @apply #{map-get($value, "text-color")};
+          &:hover {
+            @apply #{map-get($value, "hover-background-color")};
+          }
+        }
+      }
+    }
+  }
+}

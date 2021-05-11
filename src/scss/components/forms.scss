@@ -1,0 +1,187 @@
+@import "../variables";
+
+.form-icon {
+  @apply h-4 w-4 stroke-current absolute bottom-0;
+  margin-bottom: 10px;
+  &.form-success {
+    @apply text-red-500;
+  }
+  &.form-error {
+    @apply text-green-500;
+  }
+  [data-direction="ltr"] & {
+    @apply right-0 mr-2;
+  }
+  [data-direction="rtl"] & {
+    @apply left-0 ml-2;
+  }
+}
+
+@each $key, $value in $palettes {
+  [data-background="#{$key}"] {
+    .form-input,
+    .form-textarea,
+    .form-multiselect,
+    .form-select {
+      // @apply #{map-get($value, "background-color")};
+      @apply bg-transparent;
+      @apply #{map-get($value, "border-color")};
+      @apply #{map-get($value, "text-color")};
+      border-radius: 0;
+      border-width: 1px;
+      box-shadow: unset;
+      border-color: hsl(0,0%,80%);
+
+      &.border-underline{
+        border-left: unset;
+        border-right: unset;
+        border-top: unset;
+      }
+    }
+    .form-input::placeholder,
+    .form-textarea::placeholder,
+    .form-multiselect::placeholder,
+    .form-select::placeholder {
+      color: #{map-get($value, "placeholder-color")};
+    }
+    .form-radio{
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+    .form-radio:focus{
+      box-shadow: unset;
+    }
+    .form-checkbox {
+      color:#667eea;
+      border-radius: unset;
+    }
+    .form-checkbox:hover {
+      border-color:#667eea;
+    }
+    .form-input:focus,
+    .form-textarea:focus,
+    .form-multiselect:focus,
+    .form-select:focus {
+      border-color: rgba(102, 126, 234, var(--bg-opacity));
+    }
+    .items-input{
+      border-style: solid;
+      border-width: 0 0 1px;
+      border-color: hsl(0,0%,80%);
+    }
+    .items-input.active{
+      border-color: rgba(102, 126, 234, var(--bg-opacity));
+    }
+  }
+}
+
+.react-switch.sm {
+  transform: scale(.7);
+}
+
+.react-switch.xs {
+  transform: scale(.5);
+  .react-switch-handle{
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 5px !important;
+  }
+}
+
+.box-select-dropdown-wrapper{
+  position: relative;
+  .box-select-dropdown{
+    position: absolute;
+    min-width: 140px;
+    top: 36px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 0 0 1px hsla(0,0%,0%,0.1), 0 4px 11px hsla(0,0%,0%,0.1);
+    padding: 8px 12px;
+    z-index: 9;
+    .box-select-dropdown-item{
+      padding: 2px 0;
+      label, input{
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.common-select-dropdown-wrapper {
+  position: relative;
+  user-select: none;
+  cursor: default;
+  .common-select-dropdown-control {
+    border: solid 1px hsl(0,0%,80%);
+    .common-select-dropdown-text{
+      background-color: transparent;
+      color: hsl(0,0%,50%);
+      padding: 8px;
+      &.active{
+        color: hsl(0,0%,20%);
+      }
+    }
+    .common-select-dropdown-indicator-wrapper{
+      padding: 7px;
+      color: hsl(0,0%,80%);
+      svg{
+        display: inline-block;
+        fill: currentColor;
+        line-height: 1;
+        stroke: currentColor;
+        stroke-width: 0;
+      }
+    }
+  }
+  &.focus{
+    .common-select-dropdown-control{
+     @apply border-indigo-500;
+   }
+
+    .common-select-dropdown-indicator-wrapper{
+      color: hsl(0,0%,40%);
+    }
+  }
+  .common-select-dropdown{
+    position: absolute;
+    min-width: 100%;
+    max-height: 300px;
+    top: 39px;
+    left: 0;
+    padding: 4px 0;
+    margin-bottom: 2rem;
+    background-color: white;
+    overflow-y: auto;
+    box-shadow: 0 0 0 1px hsla(0,0%,0%,0.1), 0 4px 11px hsla(0,0%,0%,0.1);
+    z-index: 9;
+    .common-select-dropdown-item{
+      padding: 8px 12px;
+      &:hover{
+        background-color: rgba(102,126,234,0.25);
+      }
+      &.active{
+        background-color: #667eea;
+        color: hsl(0,0%,100%);
+      }
+    }
+  }
+
+
+  &.size-sm{
+    .common-select-dropdown-text{
+      padding: 4.75px 7px 5px;
+    }
+    .common-select-dropdown-indicator-wrapper{
+      padding: 4.75px 7px 5px;
+    }
+    .common-select-dropdown{
+      top: 34px;
+      .common-select-dropdown-item{
+        padding: 6.5px 12px;
+      }
+    }
+  }
+}
+
+.invalid::first-letter{
+  text-transform: uppercase;
+}

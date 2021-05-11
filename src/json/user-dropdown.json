@@ -1,0 +1,49 @@
+[
+  {
+    "url": "/",
+    "icon": "icon-envelope",
+    "iconColor": "default",
+    "name": "Inbox",
+    "badge": true,
+    "badgeText": "New",
+    "badgeNumber": 2,
+    "badgeColor": "red"
+  },
+  {
+    "url": "/",
+    "icon": "icon-star",
+    "iconColor": "default",
+    "name": "Messages",
+    "badge": true,
+    "badgeText": "Important",
+    "badgeNumber": 3,
+    "badgeColor": "indigo"
+  },
+  {
+    "url": "/extras/user-profile",
+    "icon": "icon-settings",
+    "iconColor": "default",
+    "name": "Profile",
+    "badge": false,
+    "badgeText": false,
+    "badgeColor": false
+  },
+  {
+    "url": "/pages/lock-screen",
+    "icon": "icon-clock",
+    "iconColor": "default",
+    "name": "Lock screen",
+    "badge": false,
+    "badgeText": false,
+    "badgeColor": false
+  },
+  {
+    "url": "/pages/logout",
+    "icon": "icon-power",
+    "iconColor": "default",
+    "name": "Logout",
+    "badge": false,
+    "badgeText": false,
+    "badgeColor": false
+  }
+]

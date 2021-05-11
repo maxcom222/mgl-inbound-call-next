@@ -1,0 +1,68 @@
+[data-direction="ltr"] {
+  &[data-layout="layout-1"] {
+    .navbar {
+      @apply z-10 fixed top-0 left-0 pl-0 w-full h-16 flex shadow;
+      .navbar-inner {
+        @apply pr-4;
+      }
+    }
+    .main {
+      @apply pl-0;
+    }
+    .left-sidebar {
+      @apply w-64 transform shadow fixed top-0 left-0 bottom-0 h-full overflow-hidden z-20 transition-transform duration-300 ease-in-out -translate-x-64;
+      > div {
+        @apply absolute top-0 left-0 bottom-0 h-full overflow-auto;
+        > div {
+          @apply h-full w-64;
+        }
+      }
+    }
+    &[data-collapsed="true"] {
+      .main {
+        @apply pl-0;
+      }
+      .left-sidebar {
+        @apply translate-x-0;
+      }
+      .navbar {
+        @apply pl-0;
+      }
+    }
+  }
+}
+
+@screen lg {
+  [data-direction="ltr"] {
+    &[data-layout="layout-1"] {
+      .main {
+        @apply pl-64;
+      }
+      .left-sidebar {
+        @apply transition-transform duration-0 ease-in-out translate-x-0;
+      }
+      .navbar {
+        @apply pl-0;
+        .navbar-inner {
+          @apply pl-64;
+        }
+      }
+      .logo button {
+        @apply hidden;
+      }
+      &[data-collapsed="true"] {
+        .main {
+          @apply pl-0;
+        }
+        .left-sidebar {
+          @apply -translate-x-64;
+        }
+        .navbar {
+          .navbar-inner {
+            @apply pl-0;
+          }
+        }
+      }
+    }
+  }
+}

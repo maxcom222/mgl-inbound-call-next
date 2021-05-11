@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Google Chrome",
+    "icon": "fa fa-chrome",
+    "amount": 435,
+    "percent": 64
+  },
+  {
+    "name": "Firefox",
+    "icon": "fa fa-firefox",
+    "amount": 223,
+    "percent": 52
+  },
+  {
+    "name": "Internet Explorer 11",
+    "icon": "fa fa-internet-explorer",
+    "amount": 235,
+    "percent": 32
+  },
+  {
+    "name": "Safari",
+    "icon": "fa fa-safari",
+    "amount": 150,
+    "percent": 25
+  },
+  {
+    "name": "Internet Explorer 10",
+    "icon": "fa fa-internet-explorer",
+    "amount": 88,
+    "percent": 18
+  },
+  {
+    "name": "Internet Explorer 9",
+    "icon": "fa fa-internet-explorer",
+    "amount": 35,
+    "percent": 14
+  },
+  {
+    "name": "Opera",
+    "icon": "fa fa-opera",
+    "amount": 20,
+    "percent": 11
+  }
+]

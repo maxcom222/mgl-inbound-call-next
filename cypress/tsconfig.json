@@ -1,0 +1,15 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "isolatedModules": false,
+    "noEmit": false,
+    "target": "es5",
+    "module": "commonjs",
+    "jsx": "react",
+    "types": ["cypress", "node"],
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["../src/*"]
+    }
+  }
+}

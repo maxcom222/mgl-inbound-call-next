@@ -1,0 +1,21 @@
+@import "../variables";
+
+.breadcrumbs {
+  @apply w-full flex;
+  > ol {
+    @apply list-none flex flex-row items-center justify-start;
+    > li {
+      @apply flex items-center;
+    }
+  }
+  [data-direction="ltr"] & {
+    .breadcrumb-arrow {
+      transform: rotate(0deg);
+    }
+  }
+  [data-direction="rtl"] & {
+    .breadcrumb-arrow {
+      transform: rotate(180deg);
+    }
+  }
+}

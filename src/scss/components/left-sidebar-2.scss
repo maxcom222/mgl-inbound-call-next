@@ -1,0 +1,111 @@
+.left-sidebar {
+  &.left-sidebar-2 {
+    .list-item {
+      > ul {
+        @apply transition duration-150 ease-in-out shadow z-20;
+        @apply list-none flex absolute top-0;
+        [data-direction="ltr"] & {
+          @apply left-0;
+        }
+        [data-direction="rtl"] & {
+          @apply right-0;
+        }
+        > li {
+          > a,
+          > button {
+            @apply h-12 px-4 w-full flex items-center;
+          }
+        }
+      }
+      &.list-item-collapsed {
+        @apply w-16;
+        > a,
+        > button {
+          @apply h-12 w-full flex items-center justify-center;
+          .list-item-icon {
+            @apply text-lg font-bold;
+          }
+        }
+        > ul {
+          [data-direction="ltr"] & {
+            @apply ml-16;
+          }
+          [data-direction="rtl"] & {
+            @apply mr-16;
+          }
+        }
+      }
+      &:not(.list-item-collapsed) {
+        @apply w-64;
+        > a,
+        > button {
+          @apply h-12 px-4 w-full flex items-center justify-between;
+          .list-item-icon {
+            @apply text-base font-bold;
+            [data-direction="ltr"] & {
+              @apply mr-4;
+            }
+            [data-direction="rtl"] & {
+              @apply ml-4;
+            }
+          }
+          .list-item-title {
+            [data-direction="ltr"] & {
+              @apply mr-auto;
+            }
+            [data-direction="rtl"] & {
+              @apply ml-auto;
+            }
+          }
+          .list-item-badge {
+            [data-direction="ltr"] & {
+              @apply ml-auto pr-4;
+            }
+            [data-direction="rtl"] & {
+              @apply mr-auto pl-4;
+            }
+          }
+        }
+        > ul {
+          [data-direction="ltr"] & {
+            @apply ml-64;
+          }
+          [data-direction="rtl"] & {
+            @apply mr-64;
+          }
+        }
+      }
+    }
+  }
+
+  .right-arrow:before {
+    font-family: "simple-line-icons";
+    content: "\e606";
+    position: absolute;
+    top: 15px;
+    font-size: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  [data-direction="ltr"] & {
+    .right-arrow:before {
+      right: 8px;
+    }
+  }
+  [data-direction="rtl"] & {
+    .right-arrow:before {
+      left: 8px;
+      transform: rotate(-540deg);
+    }
+  }
+
+  &.left-sidebar-2 ul > li > button + ul {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+  &.left-sidebar-2 ul > li:hover > button + ul {
+    visibility: visible;
+    pointer-events: auto;
+    opacity: 1;
+  }
+}

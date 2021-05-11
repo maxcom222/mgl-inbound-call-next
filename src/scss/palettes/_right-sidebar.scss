@@ -1,0 +1,10 @@
+@import "../variables";
+
+@each $key, $value in $palettes {
+  [data-right-sidebar="#{$key}"] {
+    .right-sidebar {
+      @apply #{map-get($value, "background-color")} #{map-get($value, "text-color")};
+    }
+  }
+}
+

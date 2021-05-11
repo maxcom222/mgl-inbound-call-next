@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Recurring revenue",
+    "period": "This month",
+    "amount": "$6,541",
+    "percent": "65%"
+  },
+  {
+    "name": "Net revenue",
+    "period": "This month",
+    "amount": "$1,249",
+    "percent": "12%"
+  },
+  {
+    "name": "Average revenue per user",
+    "period": "This month",
+    "amount": "$90",
+    "percent": "7%"
+  },
+  {
+    "name": "User churn",
+    "period": "This month",
+    "amount": "7%",
+    "percent": "23%"
+  },
+  {
+    "name": "Annual run rate",
+    "period": "This year",
+    "amount": "$1,249",
+    "percent": "33%"
+  },
+  {
+    "name": "Lifetime value",
+    "period": "This year",
+    "amount": "$1,249",
+    "percent": "8%"
+  },
+  {
+    "name": "Active customers",
+    "period": "This month",
+    "amount": "1,541",
+    "percent": "22%"
+  },
+  {
+    "name": "New customers",
+    "period": "This month",
+    "amount": "124",
+    "percent": "11%"
+  }
+]

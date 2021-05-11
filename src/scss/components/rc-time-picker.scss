@@ -1,0 +1,51 @@
+.rc-time-picker{
+  .rc-time-picker-input{
+    width: 170px;
+    color: #1a202c;
+    padding: 0.5rem 0.75rem;
+    border: solid 1px #ccc;
+    border-radius: unset;
+    font-size: .874rem;
+    height: unset;
+    text-transform: uppercase;
+    outline: unset;
+  }
+
+  .rc-time-picker-clear{
+    top: 7px;
+  }
+}
+
+.rc-time-picker-panel{
+  .rc-time-picker-panel-inner{
+    font-size: .874rem;
+    border: unset;
+    border-radius: unset;
+    box-shadow: 0 0 0 1px hsla(0,0%,0%,0.1), 0 4px 11px hsla(0,0%,0%,0.1);
+
+    .rc-time-picker-panel-input-wrap{
+      padding: 0.5rem 0.75rem;
+      .rc-time-picker-panel-input{
+        text-transform: uppercase;
+      }
+    }
+
+    .rc-time-picker-panel-combobox{
+      .rc-time-picker-panel-select{
+        width: 57.3px;
+        li{
+          text-transform: uppercase;
+          outline: unset;
+          &.rc-time-picker-panel-select-option-selected{
+            background-color: #667eea;
+            color: #fff;
+            font-weight: unset;
+          }
+          &:hover:not(.rc-time-picker-panel-select-option-selected){
+            background-color: rgba(102,126,234,0.25)
+          }
+        }
+      }
+    }
+  }
+}

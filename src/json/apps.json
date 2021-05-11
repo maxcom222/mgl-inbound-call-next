@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Home",
+    "icon": "icon-home"
+  },
+  {
+    "title": "Account",
+    "icon": "icon-user"
+  },
+  {
+    "title": "Comments",
+    "icon": "icon-bubbles"
+  },
+  {
+    "title": "Settings",
+    "icon": "icon-settings"
+  },
+  {
+    "title": "Maps",
+    "icon": "icon-location-pin"
+  },
+  {
+    "title": "Twitter",
+    "icon": "icon-social-twitter"
+  },
+  {
+    "title": "Facebook",
+    "icon": "icon-social-facebook"
+  },
+  {
+    "title": "Instagram",
+    "icon": "icon-social-instagram"
+  },
+  {
+    "title": "LinkedIn",
+    "icon": "icon-social-linkedin"
+  }
+]

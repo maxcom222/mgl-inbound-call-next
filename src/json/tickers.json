@@ -1,0 +1,41 @@
+[
+  {
+    "symbol": "GOOG",
+    "name": "Alphabet Inc.",
+    "last_price": "1,283.25",
+    "change": "+19.78",
+    "changepct": "+1.57%",
+    "color": "green"
+  },
+  {
+    "symbol": "AMZN",
+    "name": "Amazon.com, Inc.",
+    "last_price": "2,375.00",
+    "change": "-33.19",
+    "changepct": "-1.38%",
+    "color": "red"
+  },
+  {
+    "symbol": "FB",
+    "name": "Facebook, Inc.",
+    "last_price": "179.24",
+    "change": "+2.99",
+    "changepct": "+1.70%",
+    "color": "green"
+  },
+  {
+    "symbol": "TSLA",
+    "name": "Tesla, Inc.",
+    "last_price": "753.89",
+    "change": "+8.68",
+    "changepct": "+1.16%"
+  },
+  {
+    "symbol": "NFLX",
+    "name": "Netflix, Inc.",
+    "last_price": "422.96",
+    "change": "-16.21",
+    "changepct": "-3.69%",
+    "color": "red"
+  }
+]

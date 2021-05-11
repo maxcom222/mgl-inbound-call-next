@@ -1,0 +1,30 @@
+version: '3.7'
+
+# yaml refs
+x-refs:
+  common_config: &common_config
+    logging:
+      driver: awslogs
+      options:
+        awslogs-region: us-east-1
+        awslogs-group: mglRingbaLogGroup
+        awslogs-create-group: true
+        awslogs-datetime-format: '\[%b %d, %Y %H:%M:%S\]'
+        awslogs-multiline-pattern: '^INFO'
+
+services:
+  postgres:
+    <<: *common_config
+
+  auth:
+    <<: *common_config
+
+  data:
+    environment:
+      HASURA_GRAPHQL_DEV_MODE: 'true'
+
+  events:
+    <<: *common_config
+
+  actions:
+    <<: *common_config

@@ -1,0 +1,24 @@
+[data-direction="rtl"] {
+  &[data-layout="layout-3"] {
+    .navbar {
+      @apply z-10 absolute top-0 left-0 w-full h-16 flex shadow;
+      @apply pr-64;
+    }
+    .left-sidebar {
+      @apply shadow absolute top-0 right-0 bottom-0 h-full z-10 w-64;
+    }
+    .main {
+      @apply pr-64;
+    }
+    &[data-collapsed="true"] {
+      .left-sidebar {
+        @apply w-16;
+      }
+      .navbar,
+      .main {
+        @apply pr-16;
+      }
+    }
+  }
+}
+

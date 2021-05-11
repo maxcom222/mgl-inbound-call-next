@@ -1,0 +1,54 @@
+{
+  "general": {
+    "email": "Email",
+    "password": "Mật khẩu",
+    "login": "Đăng nhập",
+    "logout": "Đăng ký"
+  },
+  "messsage": {},
+  "validation": {
+    "mixed": {
+      "default": "{{path}} không hợp lệ",
+      "required": "Yêu cầu nhập {{path}}",
+      "oneOf": "{{path}} phải thuộc một trong các giá trị sau: {{values}}",
+      "notOneOf": "{{path}} không được nằm trong các giá trị sau: {{values}}"
+    },
+    "string": {
+      "length": "{{path}} phải có chính xác {{length}} ký tự",
+      "min": "{{path}} cần tối thiểu {{min}} ký tự",
+      "max": "{{path}} giới hạn tối đa {{max}} ký tự",
+      "matches": "{{path}} phải có dạng: '{{regex}}'",
+      "email": "Email không hợp lệ",
+      "url": "{{path}} URL không hợp lệ",
+      "trim": "{{path}} không được có khoảng trắng ở đầu hoặc cuối câu",
+      "lowercase": "{{path}} phải là chữ thường",
+      "uppercase": "{{path}} phải là chữ in hoa"
+    },
+    "number": {
+      "min": "{{path}} phải lớn hơn hoặc bằng {{min}}",
+      "max": "{{path}} nhỏ hơn hoặc bằng {{max}}",
+      "lessThan": "{{path}} phải nhỏ hơn {{less}}",
+      "moreThan": "{{path}} phải lớn hơn {{more}}",
+      "notEqual": "{{path}} phải khác {{notEqual}}",
+      "positive": "{{path}} phải là số dương",
+      "negative": "{{path}} phải là số âm",
+      "integer": "{{path}} phải là số nguyên"
+    },
+    "date": {
+      "min": "{{path}} phải lớn hơn hoặc bằng {{min}}",
+      "max": "{{path}} nhỏ hơn hoặc bằng {{max}}"
+    },
+    "object": {
+      "noUnknown": "{{path}} có phần tử không xác định: {{unknown}}"
+    },
+    "array": {
+      "min": "{{path}} phải có it nhất {{min}} phần tử",
+      "max": "{{path}} chỉ có tối đa {{max}} phàn tử"
+    }
+  },
+  "pageTitle": {
+    "home": "Trang chủ",
+    "login": "Đăng nhập",
+    "about": "Về chúng tôi"
+  }
+}

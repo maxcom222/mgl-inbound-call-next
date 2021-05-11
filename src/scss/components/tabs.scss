@@ -1,0 +1,63 @@
+@import "../variables";
+
+.tabs {
+  .tab {
+    @apply uppercase;
+    @apply text-xs;
+    &.tab-pill {
+      @apply rounded-lg flex flex-col items-center justify-center w-24;
+    }
+  }
+  .tab-content {
+    @apply w-full p-4;
+  }
+  .tab-content.no-content-padding{
+    padding: unset;
+  }
+}
+
+@each $key, $value in $palettes {
+  [data-background="#{$key}"] {
+    .tabs {
+      @apply #{map-get($value, "background-color")};
+      .tab {
+        @apply #{map-get($value, "background-color")};
+        &:hover,
+        &.tab-active {
+          @apply #{map-get($value, "hover-background-color")};
+        }
+        &.tab-underline {
+          @apply border-b-2 #{map-get($value, "tabs-border-color")};
+          &:hover,
+          &.tab-active {
+            @apply #{map-get($value, "background-color")};
+            @apply border-b-2 #{map-get($value, "highlight-border-color")};
+          }
+        }
+      }
+      .tab-content {
+        @apply #{map-get($value, "background-color")};
+      }
+    }
+
+    .tabs.tabs-vertical-box{
+      .tab {
+        @apply #{map-get($value, "background-color")};
+        &:hover,
+        &.tab-active {
+          @apply #{map-get($value, "hover-background-color")};
+        }
+        &.tab-vertical-box {
+          background-color: #E7E7F3;
+          text-transform: capitalize;
+          &.tab-active{
+            background-color: #FFF;
+          }
+        }
+      }
+      .tab-content{
+        @apply p-3
+      }
+    }
+  }
+}

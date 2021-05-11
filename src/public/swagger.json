@@ -1,0 +1,1111 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "You can find out more about     Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).",
+    "version": "1.0.0",
+    "title": "MGL Call Distribution App",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "apiteam@swagger.io"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "mglcalldistribution.io",
+  "basePath": "/api",
+  "tags": [
+    {
+      "name": "ivr",
+      "description": ""
+    },
+    {
+      "name": "numbers",
+      "description": ""
+    },
+    {
+      "name": "phone",
+      "description": ""
+    }
+  ],
+  "schemes": ["https", "http"],
+  "paths": {
+    "/ivr/welcome": {
+      "get": {
+        "tags": ["ivr"],
+        "summary": "Select Options",
+        "description": "Webhook for Twilio Twiml App",
+        "produces": ["application/xml", "application/json"],
+        "parameters": [
+          {
+            "name": "AccountSid",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "ApiVersion",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "ApplicationSid",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "Called",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CalledCity",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CalledCountry",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CalledState",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CalledZip",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "Caller",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CallerCity",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CallerCountry",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CallerName",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CallerState",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CallerZip",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CallSid",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CallStatus",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "Direction",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "From",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "FromCity",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "FromCountry",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "FromState",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "FromZip",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "To",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "ToCity",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "ToCountry",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "ToState",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "ToZip",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "twiml voice response",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "response": {
+                  "type": "object",
+                  "description": "The response object."
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid tag value"
+          }
+        }
+      }
+    },
+    "/ivr/select-team": {
+      "get": {
+        "tags": ["ivr"],
+        "summary": "Select Options",
+        "description": "Webhook for Twilio Twiml App",
+        "produces": ["application/xml", "application/json"],
+        "parameters": [
+          {
+            "name": "AccountSid",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "ApiVersion",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "ApplicationSid",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "Called",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CalledCity",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CalledCountry",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CalledState",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CalledZip",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "Caller",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CallerCity",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CallerCountry",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CallerName",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CallerState",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CallerZip",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CallSid",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "CallStatus",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "Direction",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "From",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "FromCity",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "FromCountry",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "FromState",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "FromZip",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "To",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "ToCity",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "ToCountry",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "ToState",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "ToZip",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "Digits",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "FinishedOnKey",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "msg",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "twiml voice response",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "response": {
+                  "type": "object",
+                  "description": "The response object."
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid tag value"
+          }
+        }
+      }
+    },
+    "/numbers/search": {
+      "get": {
+        "tags": ["numbers"],
+        "summary": "Get available numbers",
+        "description": "Get available numbers from twilio",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "area_code",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "resource_type",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Number"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid tag value"
+          }
+        }
+      }
+    },
+    "/numbers/info": {
+      "get": {
+        "tags": ["numbers"],
+        "summary": "Get Info about a number",
+        "description": "Get Info of existing twilio number",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "phone_number",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "accountSid": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "addressSid": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "addressRequirements": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "apiVersion": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "beta": {
+                    "type": "boolean",
+                    "description": ""
+                  },
+                  "capabilities": {
+                    "type": "object"
+                  },
+                  "dateCreated": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "dateUpdated": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "friendlyName": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "identitySid": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "phoneNumber": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "origin": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "sid": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "smsApplicationSid": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "smsFallbackMethod": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "smsFallbackUrl": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "smsMethod": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "smsUrl": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "statusCallback": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "statusCallbackMethod": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "trunkSid": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "uri": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "voiceReceiveMode": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "voiceApplicationSid": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "voiceCallerIdLookup": {
+                    "type": "boolean",
+                    "description": ""
+                  },
+                  "voiceFallbackMethod": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "voiceFallbackUrl": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "voiceMethod": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "voiceUrl": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "emergencyStatus": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "emergencyAddressSid": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "bundleSid": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "status": {
+                    "type": "string",
+                    "description": ""
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid tag value"
+          }
+        }
+      }
+    },
+    "/numbers/buy": {
+      "post": {
+        "tags": ["numbers"],
+        "summary": "Buy a new number",
+        "description": "Buy new number from twilio and saved to db",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/BuyNumberRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "accountSid": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "addressSid": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "addressRequirements": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "apiVersion": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "beta": {
+                    "type": "boolean",
+                    "description": ""
+                  },
+                  "capabilities": {
+                    "type": "object"
+                  },
+                  "dateCreated": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "dateUpdated": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "friendlyName": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "identitySid": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "phoneNumber": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "origin": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "sid": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "smsApplicationSid": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "smsFallbackMethod": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "smsFallbackUrl": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "smsMethod": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "smsUrl": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "statusCallback": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "statusCallbackMethod": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "trunkSid": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "uri": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "voiceReceiveMode": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "voiceApplicationSid": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "voiceCallerIdLookup": {
+                    "type": "boolean",
+                    "description": ""
+                  },
+                  "voiceFallbackMethod": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "voiceFallbackUrl": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "voiceMethod": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "voiceUrl": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "emergencyStatus": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "emergencyAddressSid": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "bundleSid": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "status": {
+                    "type": "string",
+                    "description": ""
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid tag value"
+          }
+        }
+      }
+    },
+    "/phone/call/assignment": {
+      "post": {
+        "tags": ["phone"],
+        "summary": "Assign task to worker",
+        "description": "Webook for Twilio to assign task to a worker",
+        "consumes": ["application/x-www-form-urlencoded"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "AccountSid",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "in": "formData",
+            "name": "ReservationSid",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "in": "formData",
+            "name": "TaskAge",
+            "type": "number",
+            "description": ""
+          },
+          {
+            "in": "formData",
+            "name": "TaskAttributes",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "in": "formData",
+            "name": "TaskPriority",
+            "type": "number",
+            "description": ""
+          },
+          {
+            "in": "formData",
+            "name": "TaskQueueSid",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "in": "formData",
+            "name": "TaskSid",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "in": "formData",
+            "name": "WorkerAttributes",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "in": "formData",
+            "name": "WorkerSid",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "in": "formData",
+            "name": "WorkflowSid",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "in": "formData",
+            "name": "WorkspaceSid",
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "instruction": {
+                  "type": "string",
+                  "description": ""
+                },
+                "call_sid": {
+                  "type": "string",
+                  "description": ""
+                },
+                "url": {
+                  "type": "string",
+                  "description": ""
+                },
+                "accept": {
+                  "type": "boolean",
+                  "description": ""
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid tag value"
+          }
+        }
+      }
+    },
+    "/phone/call/assignment/{phoneNumber}": {
+      "post": {
+        "tags": ["phone"],
+        "summary": "Call worker",
+        "description": "Webook for Twilio to call a worker",
+        "consumes": ["application/x-www-form-urlencoded"],
+        "produces": ["application/xml"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "phoneNumber",
+            "type": "string",
+            "required": true,
+            "description": ""
+          },
+          {
+            "name": "AccountSid",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "ApiVersion",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "ApplicationSid",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "Called",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "CalledCity",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "CalledCountry",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "CalledState",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "CalledZip",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "Caller",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "CallerCity",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "CallerCountry",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "CallerName",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "CallerState",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "CallerZip",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "CallSid",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "CallStatus",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "Direction",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "From",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "FromCity",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "FromCountry",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "FromState",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "FromZip",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "To",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "ToCity",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "ToCountry",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "ToState",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "ToZip",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "QueueResult",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "QueueSid",
+            "in": "formData",
+            "type": "string"
+          },
+          {
+            "name": "QueueTime",
+            "in": "formData",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "twiml voice response",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "response": {
+                  "type": "object",
+                  "description": "The response object."
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid tag value"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Number": {
+      "type": "object",
+      "properties": {
+        "friendlyName": {
+          "type": "string",
+          "description": ""
+        },
+        "phoneNumber": {
+          "type": "string",
+          "description": ""
+        },
+        "lata": {
+          "type": "string",
+          "description": ""
+        },
+        "locality": {
+          "type": "string",
+          "description": ""
+        },
+        "rateCenter": {
+          "type": "string",
+          "description": ""
+        },
+        "latitude": {
+          "type": "string",
+          "description": ""
+        },
+        "longitude": {
+          "type": "string",
+          "description": ""
+        },
+        "region": {
+          "type": "string",
+          "description": ""
+        },
+        "postalCode": {
+          "type": "string",
+          "description": ""
+        },
+        "isoCountry": {
+          "type": "string",
+          "description": ""
+        },
+        "addressRequirements": {
+          "type": "string",
+          "description": ""
+        },
+        "beta": {
+          "type": "boolean",
+          "description": ""
+        },
+        "capabilities": {
+          "type": "object",
+          "description": ""
+        }
+      }
+    },
+    "BuyNumberRequest": {
+      "type": "object",
+      "properties": {
+        "phoneNumber": {
+          "$ref": "#/definitions/Number",
+          "description": ""
+        },
+        "resource_type": {
+          "type": "string",
+          "description": ""
+        },
+        "affiliateId": {
+          "type": "string",
+          "description": ""
+        },
+        "accountId": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  }
+}

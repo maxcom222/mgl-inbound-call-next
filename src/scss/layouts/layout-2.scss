@@ -1,0 +1,24 @@
+[data-direction="ltr"] {
+  &[data-layout="layout-2"] {
+    .navbar {
+      @apply z-10 fixed top-0 left-0 right-0 p-0 w-full h-16 flex shadow;
+    }
+    .main {
+      @apply pl-0;
+    }
+    .left-sidebar {
+      @apply w-64 transform shadow fixed top-0 left-0 bottom-0 h-full overflow-hidden z-20 transition-transform duration-300 ease-in-out -translate-x-64;
+      > div {
+        @apply absolute top-0 left-0 bottom-0 h-full overflow-auto;
+        > div {
+          @apply h-full w-64;
+        }
+      }
+    }
+    &[data-collapsed="true"] {
+      .left-sidebar {
+        @apply translate-x-0;
+      }
+    }
+  }
+}

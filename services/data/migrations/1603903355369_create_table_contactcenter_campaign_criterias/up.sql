@@ -1,0 +1,1 @@
+CREATE TABLE "contactcenter"."campaign_criterias"("id" integer NOT NULL DEFAULT nextval('contactcenter.campaign_criterias_id_seq'::regclass), "campaignId" integer, "created_at" timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP, "updated_at" timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY ("id") , UNIQUE ("id"));

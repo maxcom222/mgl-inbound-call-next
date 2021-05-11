@@ -1,0 +1,24 @@
+type Query {
+  addNumbers (
+    numbers: [Int]
+  ): AddResult
+}
+
+
+type Query {
+  hello (
+    hello: String!
+  ): HelloOutput
+}
+
+
+
+
+type AddResult {
+  sum : Int
+}
+
+type HelloOutput {
+  hello : String!
+}
+

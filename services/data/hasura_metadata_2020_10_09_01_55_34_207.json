@@ -1,0 +1,655 @@
+{
+  "version": 2,
+  "tables": [
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "accounts"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "affiliates"
+      },
+      "array_relationships": [
+        {
+          "name": "campaigns",
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "affiliateId",
+              "table": {
+                "schema": "contactcenter",
+                "name": "campaign_affiliates"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "app_configuration"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "buyers"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "call_conversion_settings"
+      },
+      "object_relationships": [
+        {
+          "name": "deDupeSetting",
+          "using": {
+            "foreign_key_constraint_on": "deDupeSettingId"
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "call_instructions"
+      },
+      "array_relationships": [
+        {
+          "name": "sip",
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "callInstructionsId",
+              "table": {
+                "schema": "contactcenter",
+                "name": "sip_numbers"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "call_routes"
+      },
+      "object_relationships": [
+        {
+          "name": "callTarget",
+          "using": {
+            "foreign_key_constraint_on": "callTargetId"
+          }
+        },
+        {
+          "name": "priority",
+          "using": {
+            "foreign_key_constraint_on": "priorityId"
+          }
+        }
+      ],
+      "array_relationships": [
+        {
+          "name": "campaigns",
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "callRouteId",
+              "table": {
+                "schema": "contactcenter",
+                "name": "campaign_call_routes"
+              }
+            }
+          }
+        },
+        {
+          "name": "conversionSettings",
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "callRouteId",
+              "table": {
+                "schema": "contactcenter",
+                "name": "call_conversion_settings"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "campaign_affiliates"
+      },
+      "object_relationships": [
+        {
+          "name": "affiliate",
+          "using": {
+            "foreign_key_constraint_on": "affiliateId"
+          }
+        },
+        {
+          "name": "campaign",
+          "using": {
+            "foreign_key_constraint_on": "campaignId"
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "campaign_call_routes"
+      },
+      "object_relationships": [
+        {
+          "name": "campaign",
+          "using": {
+            "foreign_key_constraint_on": "campaignId"
+          }
+        },
+        {
+          "name": "route",
+          "using": {
+            "foreign_key_constraint_on": "callRouteId"
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "campaigns"
+      },
+      "object_relationships": [
+        {
+          "name": "deDupeSettings",
+          "using": {
+            "foreign_key_constraint_on": "deDupeSettingsId"
+          }
+        },
+        {
+          "name": "defaultNumber",
+          "using": {
+            "foreign_key_constraint_on": "defaultNumberId"
+          }
+        },
+        {
+          "name": "defaultTarget",
+          "using": {
+            "foreign_key_constraint_on": "defaultTargetId"
+          }
+        },
+        {
+          "name": "dialSettings",
+          "using": {
+            "foreign_key_constraint_on": "dialSettingsId"
+          }
+        },
+        {
+          "name": "duplicateSettings",
+          "using": {
+            "foreign_key_constraint_on": "duplicateSettingsId"
+          }
+        },
+        {
+          "name": "recordSetting",
+          "using": {
+            "foreign_key_constraint_on": "recordSettingId"
+          }
+        },
+        {
+          "name": "spamDetection",
+          "using": {
+            "foreign_key_constraint_on": "spamDetectionSettingsId"
+          }
+        }
+      ],
+      "array_relationships": [
+        {
+          "name": "affiliateNumbers",
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "campaignId",
+              "table": {
+                "schema": "contactcenter",
+                "name": "numbers"
+              }
+            }
+          }
+        },
+        {
+          "name": "affiliates",
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "campaignId",
+              "table": {
+                "schema": "contactcenter",
+                "name": "campaign_affiliates"
+              }
+            }
+          }
+        },
+        {
+          "name": "routes",
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "campaignId",
+              "table": {
+                "schema": "contactcenter",
+                "name": "campaign_call_routes"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "comparisons_type"
+      },
+      "is_enum": true
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "criterias"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "dial_settings"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "distributions_type"
+      },
+      "is_enum": true
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "duplicate_call_settings"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "duplicate_setting_type"
+      },
+      "is_enum": true
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "duplicate_settings"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "integration_conversion_sets"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "integration_settings"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "integrations"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "iso_weekdays_type"
+      },
+      "is_enum": true
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "knex_migrations"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "knex_migrations_lock"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "mark_as_duplicate_settings"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "missed_calls"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "number_assignment_settings"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "number_tags"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "numbers"
+      },
+      "object_relationships": [
+        {
+          "name": "affiliate",
+          "using": {
+            "foreign_key_constraint_on": "affiliateId"
+          }
+        },
+        {
+          "name": "assignmentSettings",
+          "using": {
+            "foreign_key_constraint_on": "assignmentSettingsId"
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "office_breaks"
+      },
+      "object_relationships": [
+        {
+          "name": "startTime",
+          "using": {
+            "foreign_key_constraint_on": "startTimeId"
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "open_settings"
+      },
+      "object_relationships": [
+        {
+          "name": "closeTime",
+          "using": {
+            "foreign_key_constraint_on": "closeTimeId"
+          }
+        },
+        {
+          "name": "openTime",
+          "using": {
+            "foreign_key_constraint_on": "openTimeId"
+          }
+        }
+      ],
+      "array_relationships": [
+        {
+          "name": "breaks",
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "openSettingsId",
+              "table": {
+                "schema": "contactcenter",
+                "name": "office_breaks"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "operation_times"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "record_call_settings"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "routing_priorities"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "schedules_and_capacities"
+      },
+      "array_relationships": [
+        {
+          "name": "hoursOfOperation",
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "scheduleId",
+              "table": {
+                "schema": "contactcenter",
+                "name": "open_settings"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "sip_numbers"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "spam_detection_settings"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "tag_routing_tables"
+      },
+      "array_relationships": [
+        {
+          "name": "tagCriteria",
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "tagRoutableRuleId",
+              "table": {
+                "schema": "contactcenter",
+                "name": "criterias"
+              }
+            }
+          }
+        },
+        {
+          "name": "targets",
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "tagRoutableRuleId",
+              "table": {
+                "schema": "contactcenter",
+                "name": "target_criterias"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "tags"
+      }
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "target_criterias"
+      },
+      "object_relationships": [
+        {
+          "name": "tagRoutableRule",
+          "using": {
+            "foreign_key_constraint_on": "tagRoutableRuleId"
+          }
+        },
+        {
+          "name": "target",
+          "using": {
+            "foreign_key_constraint_on": "targetId"
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "contactcenter",
+        "name": "targets"
+      },
+      "object_relationships": [
+        {
+          "name": "account",
+          "using": {
+            "foreign_key_constraint_on": "accountId"
+          }
+        },
+        {
+          "name": "instructions",
+          "using": {
+            "foreign_key_constraint_on": "callInstructionsId"
+          }
+        },
+        {
+          "name": "owner",
+          "using": {
+            "foreign_key_constraint_on": "ownerId"
+          }
+        },
+        {
+          "name": "schedule",
+          "using": {
+            "foreign_key_constraint_on": "scheduleId"
+          }
+        }
+      ],
+      "array_relationships": [
+        {
+          "name": "call_routes",
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "callTargetId",
+              "table": {
+                "schema": "contactcenter",
+                "name": "call_routes"
+              }
+            }
+          }
+        },
+        {
+          "name": "campaigns",
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "defaultTargetId",
+              "table": {
+                "schema": "contactcenter",
+                "name": "campaigns"
+              }
+            }
+          }
+        },
+        {
+          "name": "criteria",
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "targetId",
+              "table": {
+                "schema": "contactcenter",
+                "name": "target_criterias"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "name": "addNumbers",
+      "definition": {
+        "handler": "http://actions:9000/actions",
+        "output_type": "AddResult",
+        "arguments": [
+          {
+            "name": "numbers",
+            "type": "[Int]"
+          }
+        ],
+        "type": "query"
+      }
+    },
+    {
+      "name": "hello",
+      "definition": {
+        "handler": "http://actions:9000/actions",
+        "output_type": "HelloOutput",
+        "arguments": [
+          {
+            "name": "hello",
+            "type": "String!"
+          }
+        ],
+        "type": "query"
+      }
+    }
+  ],
+  "custom_types": {
+    "objects": [
+      {
+        "name": "AddResult",
+        "fields": [
+          {
+            "name": "sum",
+            "type": "Int"
+          }
+        ]
+      },
+      {
+        "name": "HelloOutput",
+        "fields": [
+          {
+            "name": "hello",
+            "type": "String!"
+          }
+        ]
+      }
+    ]
+  }
+}

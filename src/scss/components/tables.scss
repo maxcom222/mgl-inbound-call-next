@@ -1,0 +1,150 @@
+@import "../variables";
+
+.table {
+  @apply min-w-full table-auto;
+  &.no-border thead tr th,
+  &.no-border tbody tr td {
+    @apply border-0 border-none;
+  }
+  &.outline{
+    border: solid 1px black;
+    thead tr th:not(:last-child){
+      border-right: solid 1px black;
+      border-bottom: solid 1px black;
+    }
+    thead tr th:last-child{
+      border-bottom: solid 1px black;
+    }
+    tbody tr td:not(:last-child){
+      border-right: solid 1px black;
+    }
+  }
+  &.header-gray thead tr th{
+    @apply text-black #{!important};
+    background-color: #E7E7E8;
+  }
+  thead tr th {
+    @apply px-3 py-2 border-b text-xs leading-4 font-medium uppercase tracking-wider;
+  }
+  tbody tr td {
+    @apply px-3 py-2 border-b whitespace-no-wrap;
+  }
+  &.table-sm {
+    thead tr th {
+      @apply px-1 py-0;
+    }
+    tbody tr td {
+      @apply px-1 py-0;
+    }
+  }
+  &.table-lg {
+    thead tr th {
+      @apply px-6 py-3;
+    }
+    tbody tr td {
+      @apply px-6 py-3;
+    }
+  }
+  &.table-xlg {
+    thead tr th {
+      @apply px-6 py-3;
+    }
+    tbody tr td {
+      @apply px-6 py-8;
+    }
+  }
+  &.table-xlg-body {
+    thead tr th {
+      @apply px-3 py-2;
+    }
+    tbody tr td {
+      @apply px-6 py-8;
+    }
+  }
+  .form-checkbox {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+[data-direction="ltr"] {
+  .table {
+    @apply text-left;
+    thead tr th,
+    tbody tr td {
+      @apply text-left;
+    }
+  }
+}
+[data-direction="rtl"] {
+  .table {
+    @apply text-right;
+    thead tr th,
+    tbody tr td {
+      @apply text-right;
+    }
+  }
+}
+
+@each $key, $value in $palettes {
+  [data-background="#{$key}"] {
+    .table {
+      @apply #{map-get($value, "table-background-odd")};
+      &.striped {
+        tbody tr:nth-child(odd) td {
+          @apply #{map-get($value, "table-background-odd")};
+        }
+        tbody tr:nth-child(even) td {
+          // @apply #{map-get($value, "table-background-even")};
+          background-color: rgba(90, 103, 216, .1);;
+        }
+      }
+      thead tr th {
+        @apply #{map-get($value, "table-border-color")};
+        @apply #{map-get($value, "table-th-color")};
+      }
+      tbody tr td {
+        @apply #{map-get($value, "table-border-color")};
+      }
+    }
+  }
+}
+
+.datatable-container{
+  position: relative;
+  // overflow-x: auto;
+  // overflow-y: visible;
+  .datatable-header-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    .datatable-header-left {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+    }
+    .datatable-header-right{
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      .column-filter-dropdown-wrapper{
+        position: absolute;
+        top: 30px;
+        right: 0;
+        width: 200px;
+        padding: 8px 12px;
+        background-color: #fff;
+        box-shadow: 0 0 0 1px hsla(0,0%,0%,0.1), 0 4px 11px hsla(0,0%,0%,0.1);
+        z-index: 9;
+        .column-filter-dropdown-item{
+          padding: 2px 0;
+          label, input{
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

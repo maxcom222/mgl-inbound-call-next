@@ -1,0 +1,54 @@
+@import "../variables";
+
+#react-confirm-alert{
+  .react-confirm-alert-overlay{
+    background: rgba(50, 50, 50, 0.5);
+    .react-confirm-alert-body{
+      width: 512px;
+      border-radius: 0;
+      padding: 40px;
+      h1{
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+      }
+      .react-confirm-alert-button-group{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 40px;
+        button{
+          text-transform: uppercase;
+          font-size: 0.75rem;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+          border-radius: unset;
+          --bg-opacity: 1;
+          --text-opacity: 1;
+          min-width: 100px;
+          &:nth-child(1){
+            background-color: rgba(245, 101, 101, var(--bg-opacity));
+            color: rgba(255, 255, 255, var(--text-opacity));
+            &:hover{
+              background-color: rgba(229, 62, 62, var(--bg-opacity));
+            }
+          }
+          &:nth-child(2){
+            background-color: transparent;
+            border-style: solid;
+            border-width: 1px;
+            --text-opacity: 1;
+            color: rgba(102, 126, 234, var(--text-opacity));
+            --border-opacity: 1;
+            border-color: rgba(102, 126, 234, var(--border-opacity));
+            &:hover{
+              border-color: rgba(90,103,216,var(--border-opacity));
+              background-color: rgba(90,103,216,var(--border-opacity));
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

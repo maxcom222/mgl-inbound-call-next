@@ -1,0 +1,35 @@
+[data-direction="rtl"] {
+  &[data-layout="layout-4"] {
+    .navbar {
+      @apply z-20 fixed top-0 left-0 right-0 pl-0 w-full h-16 flex;
+    }
+    .top-navigation {
+      @apply flex flex-row items-center justify-start fixed left-0 right-0 w-full h-16 z-10;
+      box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+    }
+    .main {
+      @apply pt-16 pr-0;
+    }
+    .left-sidebar {
+      @apply w-64 transform shadow fixed top-0 right-0 bottom-0 h-full overflow-hidden z-30 transition-transform duration-300 ease-in-out translate-x-64;
+      > div {
+        @apply absolute top-0 right-0 bottom-0 h-full overflow-auto;
+        > div {
+          @apply h-full w-64;
+        }
+      }
+    }
+    &[data-collapsed="true"] {
+      .main {
+        @apply pr-0;
+      }
+      .left-sidebar {
+        @apply translate-x-0;
+      }
+      .navbar {
+        @apply pr-0;
+      }
+    }
+  }
+}
+

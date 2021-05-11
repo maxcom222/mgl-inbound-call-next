@@ -1,0 +1,178 @@
+@import "../variables";
+
+a,
+button {
+  @apply outline-none;
+}
+a:hover,
+a:active,
+a:focus,
+button:hover,
+button:active,
+button:focus {
+  @apply outline-none;
+}
+
+button:disabled{
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+/*colors*/
+.btn-transparent {
+  @apply bg-transparent;
+}
+
+.btn-black {
+  @apply bg-black text-white;
+}
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+  @apply bg-black text-white;
+}
+.btn-white {
+  @apply bg-white text-gray-900;
+}
+.btn-white:hover,
+.btn-white:active,
+.btn-white:focus {
+  @apply bg-gray-100 text-gray-900;
+}
+@each $color in $colors {
+  .btn-#{"" + $color} {
+    @apply bg-#{"" + $color}-500 text-white;
+
+    .loader{
+      &:after {
+        @apply bg-#{"" + $color}-500;
+      }
+    }
+  }
+  .btn-#{"" + $color}:hover,
+  .btn-#{"" + $color}:active {
+    @apply bg-#{"" + $color}-600 text-white;
+
+    .loader{
+      &:after {
+        @apply bg-#{"" + $color}-600;
+      }
+    }
+  }
+
+  .btn-outlined-#{"" + $color} {
+    @apply bg-transparent text-#{"" + $color}-600;
+    box-shadow: inset 0px 0px 0px 1px currentColor;
+
+    .loader{
+      background: linear-gradient(to right, currentColor 10%, rgba(255, 255, 255, 0) 42%);
+      &:before {
+        background-color: currentColor;;
+      }
+      &:after {
+        background-color: white;
+      }
+    }  
+  }
+  .btn-outlined-#{"" + $color}:not(:hover) {
+    .loader{
+      background: linear-gradient(to right, currentColor 10%, rgba(255, 255, 255, 0) 42%);
+    }
+  }
+  .btn-outlined-#{"" + $color}:hover,
+  .btn-outlined-#{"" + $color}:active,
+  .btn-outlined-#{"" + $color}:focus {
+    @apply bg-#{"" + $color}-600 #{!important} text-white #{!important};
+    box-shadow: inset 0px 0px 0px 1px theme('colors.#{"" + $color}.600');
+
+    .loader{
+      &:after {
+        @apply bg-#{"" + $color}-600;
+      }
+    }
+  }
+  
+  .btn-flat-#{"" + $color}:not(:hover):not(.clicked) {
+    @apply bg-transparent text-#{"" + $color}-600 #{!important};
+  }
+  .btn-flat-#{"" + $color}:hover{
+    @apply bg-#{"" + $color}-600 #{!important} text-white;
+  }
+  .btn-flat-#{"" + $color}.clicked{
+    @apply bg-#{"" + $color}-600 #{!important} text-white;
+  }
+
+  .btn-#{"" + $color}.clicked {
+    @apply bg-#{"" + $color}-600 text-white;
+  }
+}
+
+.btn {
+  @apply relative;
+  /*button sizes*/
+  &.btn-xs {
+    @apply text-xxs px-2 py-1;
+  }
+  &.btn-sm {
+    @apply text-xs px-3 py-1;
+  }
+  &.btn-default {
+    @apply text-xs px-4 py-2;
+  }
+  &.btn-lg {
+    @apply text-sm px-5 py-2;
+  }
+  &.btn-xl {
+    @apply text-base px-6 py-3;
+  }
+  /*rounded, outlined, flat, raised, icon*/
+  &.btn-rounded {
+    @apply rounded;
+  }
+  &.btn-raised {
+    @apply shadow;
+  }
+  &.btn-icon {
+    @apply flex flex-row items-center justify-center;
+  }
+  &.btn-icon:hover {
+    i{
+      font-weight: bold;
+    }
+  }
+  &.btn-block {
+    @apply w-full;
+  }
+  &.btn-circle {
+    @apply text-xs h-8 w-8 rounded-full inline-flex items-center justify-center;
+    @apply p-0 #{!important};
+    &.btn-circle-sm {
+      @apply text-xxs h-6 w-6 inline-flex items-center justify-center;
+    }
+    &.btn-circle-lg {
+      @apply text-base h-12 w-12 inline-flex items-center justify-center;
+    }
+  }
+}
+
+@each $key, $value in $palettes {
+  [data-background="#{$key}"] {
+    .btn {
+      &.btn-default-color {
+        @apply #{map-get($value, "background-color")};
+        &:hover {
+          @apply #{map-get($value, "hover-background-color")};
+        }
+      }
+    }
+  }
+}
+
+.btn-group {
+  > .btn {
+    @apply border-r-0 #{!important};
+    &:last-child {
+      @apply border-r #{!important};
+    }
+  }
+}

@@ -1,0 +1,1 @@
+CREATE SEQUENCE contactcenter.affiliate_payout_settings_id_seq;

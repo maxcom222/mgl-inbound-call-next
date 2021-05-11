@@ -1,0 +1,27 @@
+@import "../variables";
+
+@each $key, $value in $palettes {
+  [data-background="#{$key}"] {
+    .main {
+      @apply #{map-get($value, "background-color")};
+      @apply #{map-get($value, "text-color")};
+      .text-default {
+        @apply #{map-get($value, "text-color")};
+      }
+      .text-primary {
+        @apply #{map-get($value, "text-primary")};
+      }
+      .text-secondary {
+        @apply #{map-get($value, "text-secondary")};
+      }
+      .border-default {
+        @apply #{map-get($value, "border-color")};
+      }
+    }
+    code,
+    pre {
+      @apply #{map-get($value, "hover-background-color")};
+      @apply #{map-get($value, "text-color")};
+    }
+  }
+}

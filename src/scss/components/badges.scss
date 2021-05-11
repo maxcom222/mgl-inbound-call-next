@@ -1,0 +1,55 @@
+@import "../variables";
+
+.badge {
+  @apply uppercase inline-flex text-center;
+  &.badge-default {
+    @apply text-xxs px-2 py-1;
+  }
+  &.badge-sm {
+    @apply text-xxs px-2 py-0;
+  }
+  &.badge-xs {
+    @apply text-xxs px-2 py-0;
+    width: .7rem !important;
+    height: .7rem !important;
+  }
+  &.badge-lg {
+    @apply text-xs px-2 py-2;
+  }
+  &.badge-circle {
+    @apply text-xxs h-5 w-5 inline-flex items-center justify-center rounded-full;
+    @apply p-0 leading-none #{!important};
+    &.badge-sm {
+      @apply text-xxs h-4 w-4 inline-flex items-center justify-center rounded-full;
+    }
+    &.badge-lg {
+      @apply text-xs h-6 w-6 inline-flex items-center justify-center rounded-full;
+    }
+  }
+  /*rounded, outlined, flat, raised, icon*/
+  &.badge-rounded {
+    @apply rounded-lg;
+  }
+  &.badge-outlined {
+    @apply bg-transparent border border-current;
+  }
+}
+
+/*colors*/
+.badge-black {
+  @apply bg-black text-white;
+}
+.badge-white {
+  @apply bg-white text-gray-900;
+}
+@each $color in $colors {
+  .badge-#{"" + $color} {
+    @apply bg-#{"" + $color}-500 text-white;
+  }
+  .badge-alt-#{"" + $color} {
+    @apply bg-#{"" + $color}-200 text-#{"" + $color}-600;
+  }
+  .badge-outlined-#{"" + $color} {
+    @apply bg-transparent border text-#{"" + $color}-500 border-#{"" + $color}-500 #{!important};
+  }
+}

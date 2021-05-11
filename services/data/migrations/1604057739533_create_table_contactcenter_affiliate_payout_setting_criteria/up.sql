@@ -1,0 +1,1 @@
+CREATE TABLE "contactcenter"."affiliate_payout_setting_criteria"("id" integer NOT NULL DEFAULT nextval('contactcenter.affiliate_payout_setting_criteria_id_seq'::regclass), "affPayoutSettingId" integer, "created_at" Timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, "updated_at" Timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY ("id") , UNIQUE ("id"));

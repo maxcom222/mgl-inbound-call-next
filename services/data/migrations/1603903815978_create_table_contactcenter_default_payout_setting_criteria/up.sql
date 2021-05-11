@@ -1,0 +1,1 @@
+CREATE TABLE "contactcenter"."default_payout_setting_criteria"("id" integer NOT NULL DEFAULT nextval('contactcenter.default_payout_setting_criteria_id_seq'::regclass), "dePayoutSettingId" integer, "created_at" timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP, "updated_at" timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY ("id") , UNIQUE ("id"));

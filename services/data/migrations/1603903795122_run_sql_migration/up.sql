@@ -1,0 +1,1 @@
+CREATE SEQUENCE contactcenter.default_payout_setting_criteria_id_seq;

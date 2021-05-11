@@ -1,0 +1,62 @@
+@import "../variables";
+
+.alert {
+  @apply w-full flex justify-start p-4;
+  [data-direction="ltr"] & {
+    .alert-icon {
+      @apply mr-2;
+    }
+    .alert-close {
+      @apply ml-auto;
+    }
+  }
+  [data-direction="rtl"] & {
+    .alert-icon {
+      @apply ml-2;
+    }
+    .alert-close {
+      @apply mr-auto;
+    }
+  }
+  &.alert-sm {
+    @apply p-2 #{!important};
+  }
+  &.alert-hidden {
+    @apply hidden #{!important};
+  }
+}
+
+/*colors*/
+.alert-black {
+  @apply bg-black text-white;
+}
+.alert-white {
+  @apply bg-white text-gray-900;
+}
+@each $color in $colors {
+  .alert-#{"" + $color} {
+    @apply bg-#{"" + $color}-500 text-white;
+  }
+  .alert-outlined-#{"" + $color} {
+    @apply bg-transparent border text-#{"" + $color}-500 border-#{"" + $color}-500 #{!important};
+  }
+  .alert-flat-#{"" + $color} {
+    @apply bg-transparent text-#{"" + $color}-500 #{!important};
+  }
+}
+
+.alert {
+  /*rounded, outlined, flat, raised*/
+  &.alert-rounded {
+    @apply rounded-lg;
+  }
+  &.alert-flat {
+    @apply bg-transparent;
+  }
+  &.alert-outlined {
+    @apply bg-transparent border border-current;
+  }
+  &.alert-raised {
+    @apply shadow;
+  }
+}

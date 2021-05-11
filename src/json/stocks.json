@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Apple Inc.",
+    "ticker": "AAPL",
+    "price": 115.52,
+    "value": 0.39,
+    "variation": 0.34
+  },
+  {
+    "name": "Google Inc.",
+    "ticker": "GOOG",
+    "price": 635.3,
+    "value": -7.38,
+    "variation": -1.15
+  },
+  {
+    "name": "Microsoft Corporation",
+    "ticker": "MSFT",
+    "price": 46.74,
+    "value": 0.12,
+    "variation": 0.26
+  },
+  {
+    "name": "LinkedIn Corp",
+    "ticker": "LNKD",
+    "price": 190.04,
+    "value": 0.53,
+    "variation": 0.28
+  },
+  {
+    "name": "Tesla Motors, Inc",
+    "ticker": "TSLA",
+    "price": 181.47,
+    "value": -0.41,
+    "variation": -0.23
+  },
+  {
+    "name": "Yahoo",
+    "ticker": "YA",
+    "price": 37.75,
+    "value": -0.28,
+    "variation": -0.74
+  },
+  {
+    "name": "Twitter",
+    "ticker": "TWTR",
+    "price": 18.4,
+    "value": 0.2,
+    "variation": 0.25
+  },
+  {
+    "name": "Amazon.com, Inc",
+    "ticker": "AMZN",
+    "price": 740.34,
+    "value": 3.82,
+    "variation": 0.45
+  },
+  {
+    "name": "Boeing Co",
+    "ticker": "BA",
+    "price": 154.4,
+    "value": 1.66,
+    "variation": 0.33
+  },
+  {
+    "name": "GoPro",
+    "ticker": "GPRO",
+    "price": 9.78,
+    "value": -0.73,
+    "variation": -6.95
+  }
+]

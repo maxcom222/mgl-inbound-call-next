@@ -1,0 +1,61 @@
+@import 'tailwindcss/base';
+
+/* default styles */
+
+h1 {
+  @apply text-2xl;
+}
+
+h2 {
+  @apply text-xl;
+}
+
+h3 {
+  @apply text-lg;
+}
+
+a {
+  @apply text-blue-600;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number] {
+  &.textbox {
+    @apply bg-white border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal;
+
+    &:focus {
+      @apply outline-none shadow-outline;
+    }
+  }
+}
+
+button,
+input[type=submit] {
+  &.primary {
+    @apply flex-shrink-0 bg-teal-500 text-white py-2 px-4 rounded;
+
+    &:hover {
+      @apply bg-teal-600 outline-none shadow-outline;
+    }
+  }
+}
+
+.text-error {
+  @apply text-red-700;
+}
+
+.text-warning {
+  @apply text-orange-700;
+}
+
+/* Start purging... */
+@import 'tailwindcss/components';
+
+/* Stop purging. */
+
+/* Start purging... */
+@import 'tailwindcss/utilities';
+
+/* Stop purging. */

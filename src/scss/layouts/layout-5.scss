@@ -1,0 +1,13 @@
+[data-layout="layout-5"] .main {
+  @apply pl-64;
+}
+[data-layout="layout-5"][data-collapsed="true"] .main {
+  @apply pl-20;
+}
+[data-layout="layout-5"] .navbar-1 {
+  @apply pl-64;
+}
+[data-layout="layout-5"][data-collapsed="true"] .navbar-1 {
+  @apply pl-20;
+}
+

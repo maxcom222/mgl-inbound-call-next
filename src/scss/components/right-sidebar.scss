@@ -1,0 +1,31 @@
+@import "../variables";
+
+.right-sidebar {
+  &.right-sidebar-1 {
+    @apply text-sm w-64 transform transition duration-300 ease-in-out shadow fixed top-0 bottom-0 h-full overflow-hidden z-20;
+    [data-direction="ltr"] & {
+      @apply right-0;
+      &.open {
+        @apply translate-x-0;
+      }
+      &:not(.open) {
+        @apply translate-x-64;
+      }
+    }
+    [data-direction="rtl"] & {
+      @apply left-0;
+      &.open {
+        @apply translate-x-0;
+      }
+      &:not(.open) {
+        @apply -translate-x-64;
+      }
+    }
+    > div {
+      @apply absolute top-0 left-0 bottom-0 h-full overflow-auto;
+      > div {
+        @apply h-full w-64;
+      }
+    }
+  }
+}

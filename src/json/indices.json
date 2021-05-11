@@ -1,0 +1,146 @@
+[
+  {
+    "name": "DOW JONES INDUS. AVG",
+    "value": "24,242.49",
+    "net_change": "+704.81",
+    "pct_change": "+2.99%",
+    "1_month": "+26.43%",
+    "1_year": "-8.72%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "name": "S&P 500 INDEX",
+    "value": "2,874.56",
+    "net_change": "+75.01",
+    "pct_change": "+2.68%",
+    "1_month": "+24.71%",
+    "1_year": "-1.05%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "name": "NASDAQ COMPOSITE INDEX",
+    "value": "8,650.14",
+    "net_change": "+117.78",
+    "pct_change": "+1.38%",
+    "1_month": "+25.74%",
+    "1_year": "+8.15%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "name": "NYSE COMPOSITE INDEX",
+    "value": "11,208.29",
+    "net_change": "+390.26",
+    "pct_change": "+3.61%",
+    "1_month": "+22.72%",
+    "1_year": "-13.27%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "name": "S&P/TSX COMPOSITE INDEX",
+    "value": "14,359.88",
+    "net_change": "+460.56",
+    "pct_change": "+3.31%",
+    "1_month": "+21.16%",
+    "1_year": "-13.56%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "name": "Euro Stoxx 50 Pr",
+    "value": "2,888.30",
+    "net_change": "+75.95",
+    "pct_change": "+2.70%",
+    "1_month": "+13.33%",
+    "1_year": "-17.46%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "name": "FTSE 100 INDEX",
+    "value": "5,786.96",
+    "net_change": "+158.53",
+    "pct_change": "+2.82%",
+    "1_month": "+11.49%",
+    "1_year": "-22.43%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "name": "DAX INDEX",
+    "value": "10,625.78",
+    "net_change": "+324.24",
+    "pct_change": "+3.15%",
+    "1_month": "+19.00%",
+    "1_year": "-13.06%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "name": "CAC 40 INDEX",
+    "value": "4,499.01",
+    "net_change": "+148.85",
+    "pct_change": "+3.42%",
+    "1_month": "+11.12%",
+    "1_year": "-19.38%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "name": "IBEX 35 INDEX",
+    "value": "6,875.80",
+    "net_change": "+112.40",
+    "pct_change": "+1.66%",
+    "1_month": "+6.71%",
+    "1_year": "-28.24%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "name": "NIKKEI 225",
+    "value": "19,897.26",
+    "net_change": "+607.06",
+    "pct_change": "+3.15%",
+    "1_month": "+20.20%",
+    "1_year": "-10.37%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "name": "TOPIX INDEX (TOKYO)",
+    "value": "1,442.54",
+    "net_change": "+20.30",
+    "pct_change": "+1.43%",
+    "1_month": "+12.42%",
+    "1_year": "-10.79%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "name": "HANG SENG INDEX",
+    "value": "24,380.00",
+    "net_change": "+373.55",
+    "pct_change": "+1.56%",
+    "1_month": "+6.91%",
+    "1_year": "-18.63%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "name": "CSI 300 INDEX",
+    "value": "3,839.49",
+    "net_change": "+37.11",
+    "pct_change": "+0.98%",
+    "1_month": "+5.10%",
+    "1_year": "-6.82%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "name": "S&P/ASX 200 INDEX",
+    "value": "5,487.54",
+    "net_change": "+71.26",
+    "pct_change": "+1.32%",
+    "1_month": "+13.93%",
+    "1_year": "-12.34%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "name": "MSCI AC ASIA PACIFIC",
+    "value": "145.03",
+    "net_change": "+2.84",
+    "pct_change": "+2.00%",
+    "1_month": "+15.15%",
+    "1_year": "-11.06%",
+    "time_edt": "4/17/2020"
+  }
+]

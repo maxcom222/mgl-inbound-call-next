@@ -1,0 +1,46 @@
+@import "../variables";
+
+.progress-bar {
+  @apply relative flex w-full;
+  &:not(.progress-bar-with-text) {
+    @apply h-1;
+  }
+  &.progress-bar-with-text {
+    @apply h-5 text-center text-xs;
+  }
+  &.progress-bar-black {
+    > div {
+      @apply bg-black text-white;
+    }
+  }
+  &.progress-bar-white {
+    > div {
+      @apply bg-white text-gray-900;
+    }
+  }
+  @each $color in $colors {
+    &.progress-bar-#{"" + $color} {
+      > div {
+        @apply bg-#{"" + $color}-500 text-white;
+      }
+    }
+  }
+  > div {
+    @apply absolute top-0 h-1;
+    [data-direction="ltr"] & {
+      @apply left-0;
+    }
+    [data-direction="rtl"] & {
+      @apply right-0;
+    }
+    > div {
+      @apply absolute top-0 w-full;
+      [data-direction="ltr"] & {
+        @apply left-0;
+      }
+      [data-direction="rtl"] & {
+        @apply right-0;
+      }
+    }
+  }
+}

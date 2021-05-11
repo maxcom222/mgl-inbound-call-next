@@ -1,0 +1,56 @@
+@import "../variables";
+
+@each $key, $value in $palettes {
+  [data-left-sidebar="#{$key}"] {
+    .left-sidebar {
+      @apply #{map-get($value, "background-color")} #{map-get($value, "text-color")};
+      .user-card {
+        img {
+          @apply #{map-get($value, "border-color")};
+        }
+      }
+      &.left-sidebar-2 {
+        @apply #{map-get($value, "background-color")} #{map-get($value, "text-color")};
+        ul {
+          @apply #{map-get($value, "background-color")} #{map-get($value, "text-color")};
+        }
+      }
+      li {
+        @apply #{map-get($value, "text-color")};
+        &:hover {
+          @apply #{map-get($value, "highlight-text-color")};
+        }
+
+        button,
+        a {
+          @apply transition duration-150 ease-in-out;
+          @apply #{map-get($value, "background-color")} #{map-get($value, "text-color")};
+          .icon {
+            svg {
+              @apply #{map-get($value, "text-color")};
+            }
+          }
+          &:hover {
+            @apply #{map-get($value, "highlight-background-color")} #{map-get($value, "highlight-text-color")};
+            .icon {
+              svg {
+                @apply #{map-get($value, "highlight-text-color")};
+              }
+            }
+          }
+        }
+
+        &.is-open {
+          @apply #{map-get($value, "highlight-text-color")};
+          > button,
+          > a {
+            @apply #{map-get($value, "highlight-background-color")} #{map-get($value, "highlight-text-color")};
+            svg {
+              @apply #{map-get($value, "highlight-text-color")};
+            }
+          }
+        }
+      }
+    }
+  }
+}

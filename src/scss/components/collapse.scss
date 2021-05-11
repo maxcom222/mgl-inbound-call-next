@@ -1,0 +1,40 @@
+@import "../variables";
+
+.collapse-wrapper{
+  .collapse-arrow{
+    position: relative;
+    padding-left: 1.5rem;
+    color: #1a202c;
+    
+    &:hover{
+      color: #1a202c;
+    }
+    
+    &::before{
+      content: "";
+      font-family: "simple-line-icons";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      font-size: 9px;
+      font-weight: bold;
+      transform: rotate(0);
+    }
+  }
+
+  .collapse-body{
+    display: none;
+    padding-left: 1.5rem;
+  }
+
+  &.open{
+    .collapse-arrow{
+      &::before{
+        transform: rotate(90deg);
+      }
+    }
+    .collapse-body{
+      display: block;
+    }
+  }
+}

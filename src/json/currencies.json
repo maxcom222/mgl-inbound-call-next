@@ -1,0 +1,72 @@
+[
+  {
+    "currency": "EUR-USD",
+    "value": "1.0875",
+    "change": "0.0035",
+    "net_change": "+0.32%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "currency": "USD-JPY",
+    "value": "107.5500",
+    "change": "-0.3700",
+    "net_change": "-0.34%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "currency": "GBP-USD",
+    "value": "1.2499",
+    "change": "0.0042",
+    "net_change": "+0.34%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "currency": "AUD-USD",
+    "value": "0.6366",
+    "change": "0.0039",
+    "net_change": "+0.62%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "currency": "USD-CAD",
+    "value": "1.4001",
+    "change": "-0.0081",
+    "net_change": "-0.58%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "currency": "USD-CHF",
+    "value": "0.9666",
+    "change": "-0.0037",
+    "net_change": "-0.38%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "currency": "EUR-JPY",
+    "value": "116.9500",
+    "change": "-0.0500",
+    "net_change": "-0.04%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "currency": "EUR-GBP",
+    "value": "0.8695",
+    "change": "-0.0008",
+    "net_change": "-0.09%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "currency": "USD-HKD",
+    "value": "7.7504",
+    "change": "-0.0007",
+    "net_change": "-0.01%",
+    "time_edt": "4/17/2020"
+  },
+  {
+    "currency": "EUR-CHF",
+    "value": "1.0520",
+    "change": "0.0002",
+    "net_change": "+0.02%",
+    "time_edt": "4/17/2020"
+  }
+]

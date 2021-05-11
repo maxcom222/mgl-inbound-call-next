@@ -1,0 +1,32 @@
+.navbar {
+  &.navbar-1 {
+    .navbar-search {
+      @apply w-full max-w-sm;
+      input {
+        @apply appearance-none h-10 w-full rounded-full text-sm;
+        &:focus {
+          @apply outline-none;
+        }
+      }
+      button {
+        @apply absolute top-0 mt-3;
+      }
+      [data-direction="ltr"] & {
+        input {
+          @apply pl-10 pr-5;
+        }
+        button {
+          @apply left-0 ml-4;
+        }
+      }
+      [data-direction="rtl"] & {
+        input {
+          @apply pr-10 pl-5;
+        }
+        button {
+          @apply right-0 mr-4;
+        }
+      }
+    }
+  }
+}
